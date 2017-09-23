@@ -1,0 +1,11 @@
+#logoNav
+{
+    width: 150px;
+    padding-right: 20px;
+}
+.erroPage
+{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+} 

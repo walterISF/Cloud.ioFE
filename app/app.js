@@ -14,7 +14,7 @@ app.config(function($routeProvider, $httpProvider){
             controller: 'featuresController'
         })
         .otherwise({
-            redirectTo: '/'
+            templateUrl: 'app/view/404.html'
         });
 });
 

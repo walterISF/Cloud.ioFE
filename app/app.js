@@ -6,12 +6,28 @@ app.config(function($routeProvider, $httpProvider){
 
     $routeProvider
         .when('/', {
-            templateUrl:'app/view/home.html',
-            controller: 'homeController'
+            templateUrl:'app/view/dashboard.html',
+            controller: 'dashboardController'
         })
-        .when('/features', {
-            templateUrl:'app/view/features.html',
-            controller: 'featuresController'
+        .when('/gerenciarDroplets', {
+            templateUrl:'app/view/gerenciarDroplets.html',
+            controller: 'gerenciarDropletsController'
+        })
+        .when('/monitoramento', {
+            templateUrl:'app/view/monitoramento.html',
+            controller: 'monitoramentoController'
+        })
+        .when('/pacotesContratados', {
+            templateUrl:'app/view/pacotesContratados.html',
+            controller: 'pacotesContratadosController'
+        })
+        .when('/faturas', {
+            templateUrl:'app/view/faturas.html',
+            controller: 'faturasController'
+        })
+        .when('/ajuda', {
+            templateUrl:'app/view/ajuda.html',
+            controller: 'ajudaController'
         })
         .otherwise({
             templateUrl: 'app/view/404.html'

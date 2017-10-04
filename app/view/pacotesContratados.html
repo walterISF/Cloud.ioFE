@@ -1,59 +1,42 @@
-<h1>Pacotes Contratados</h1>
-<div class="row">
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-                <tr class="trCabecalho">
-                    <th>Descrição</th>
-                    <th>Criado</th>
-                    <th>Vencimento</th>
-                    <th></th>
-                </tr>
-            </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="table-item-description">            
-                                <i class="flaticon-hosting"></i>            
-                                <div class="content">
-                                    <div class="title">batata doce</div>
-                                    <div class="description">frango</div>
-                                </div>            
-                            </div>
-                        </td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+<div class="container">
+    <p>
+        <h2>Pacotes Contratados</h2>
+    </p>
+    <div class="row">
+        <tr class="trCabecalho">
+            <table class="table table-hover">
+                <thead class="trCabecalho">
+                        <th>Descrição</th>
+                        <th>Criado</th>
+                        <th>Vencimento</th>
+                        <th></th>
                     </tr>
+                </thead>
+                <tbody ng-repeat="pacote in pacotes">
                     <tr>
                         <td>
                             <div class="table-item-description">            
                                 <i class="flaticon-hosting"></i>            
                                 <div class="content">
-                                    <div class="title">batata doce</div>
-                                    <div class="description">frango</div>
+                                    <div class="title">{{ pacote.title }}</div>
+                                    <div class="description">{{ pacote.description }}</div>
                                 </div>            
                             </div>
                         </td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
+                        <td> {{ pacote.dataCriacao | date }} </td>
+                        <td> {{ pacote.dataVencimento | date }} </td>
                         <td>
-                            <div class="table-item-description">            
-                                <i class="flaticon-hosting"></i>            
-                                <div class="content">
-                                    <div class="title">batata doce</div>
-                                    <div class="description">frango</div>
-                                </div>            
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
                             </div>
                         </td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
                     </tr>
                 </tbody>
-                </table>    
+            </table>    
     </div>
 </div>

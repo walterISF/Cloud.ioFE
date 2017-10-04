@@ -6,6 +6,10 @@ app.config(function($routeProvider, $httpProvider){
 
     $routeProvider
         .when('/', {
+            templateUrl:'app/view/login.html',
+            controller: 'loginController'
+        })
+        .when('/dashboard', {
             templateUrl:'app/view/dashboard.html',
             controller: 'dashboardController'
         })

@@ -1,8 +1,31 @@
+@import url('flaticon.css');
 h1
 {
-    font-weight: 300;
+    font-weight: 200;
 }
 .dvView
 {
     padding: 15px;
+}
+
+.table-item-description {
+    position: relative;
+}
+
+.table-item-description i {
+    position: absolute;
+    top: 0;
+    left: 0;
+}    
+
+.table-item-description .content {
+    padding-left: calc(45px + 20px);
+}
+
+.table-item-description .content .title {
+    font-weight: 700;
+}
+
+.table-item-description .content .description {
+    opacity: .5;
 }

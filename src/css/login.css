@@ -1,4 +1,46 @@
+body, html, main 
+{
+    height: calc(100vh - 56px);
+}
+header
+{
+    display: none;
+}
 .logoLogin
 {
-    height: 100px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+.form
+{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #c1c1c1;
+    border-radius: 8px;
+    padding-bottom: 15px;    
+}
+.form .title
+{
+    border-bottom: 1px solid #c1c1c1;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f9fa; 
+}
+.form .form-group, .form .btn
+{
+    width: 90%;
+    margin: 1rem;
+    margin-bottom: 0;  
+}
+.form input
+{
+    background-color: #f8f9fa;    
+}
+.form .btn
+{
+    cursor: pointer;
+    background-color: #225964;
+    border-color: #225964;
 }

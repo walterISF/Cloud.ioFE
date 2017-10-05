@@ -1,4 +1,13 @@
 @import url('flaticon.css');
+.view
+{
+    height: calc(100vh - 56px);
+    
+}
+/*header
+{
+    display: block;
+}*/
 h1,h2,h3,h4,h5
 {
     font-weight: 200;

@@ -1,26 +1,21 @@
-<div class="container">
-    <div class="d-flex justify-content-center align-items-center flex-column">
+<div class="container h-100">
+    <div class="d-flex justify-content-center align-items-center flex-column h-100">
         <div class="row">
             <img class="logoLogin" src="img/logo_horizontal_colorido.png" alt="logoLogin">
         </div>
-        <div class="row">
+        <div class="form">
+            <div class="title">
+                <h5>Acesso</h5>       
+            </div>     
             <div class="form-group">
-                <div class="row">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Login</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Login">
-                    </div>        
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="ipPassword">Password</label>
-                        <input type="password" class="form-control" id="ipPassword" placeholder="Password">
-                    </div>        
-                </div>
-                <div class="row">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
+                <label for="ipEmail ">Email/CPF</label>
+                <input type="text" class="form-control" id="ipEmail" placeholder="">
+            </div>        
+            <div class="form-group">
+                <label for="ipPassword">Password</label>
+                <input type="password" class="form-control" id="ipPassword" placeholder="">
+            </div>        
+            <button type="submit" class="btn btn-primary" ng-click="login( ' #!dashboard ' )">Entrar</button>
         </div>
     </div>
 </div>

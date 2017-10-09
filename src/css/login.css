@@ -2,10 +2,6 @@ body, html, main
 {
     height: calc(100vh - 56px);
 }
-header
-{
-    display: none;
-}
 .logoLogin
 {
     height: 120px;

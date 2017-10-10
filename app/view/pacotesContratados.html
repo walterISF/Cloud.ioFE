@@ -7,40 +7,35 @@
 <!-- CONTEUDO -->
 <div class="container">
     <div class="row">
-        <tr class="trCabecalho">
-            <table class="table table-hover">
-                <thead class="trCabecalho">
-                        <th>Descrição</th>
-                        <th>Criado</th>
-                        <th>Vencimento</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody ng-repeat="pacote in pacotes">
-                    <tr>
-                        <td>
-                            <div class="table-item-description">            
-                                <i class="flaticon-hosting"></i>            
-                                <div class="content">
-                                    <div class="title">{{ pacote.title }}</div>
-                                    <div class="description">{{ pacote.description }}</div>
-                                </div>            
-                            </div>
-                        </td>
-                        <td> {{ pacote.dataCriacao | date }} </td>
-                        <td> {{ pacote.dataVencimento | date }} </td>
-                        <td>
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>    
+        <table class="table table-hover">
+            <thead class="trCabecalho">
+                <th>Descrição</th>
+                <th>Criado</th>
+                <th>Vencimento</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacote in pacotes">
+                    <td>
+                        <div class="table-item-description">            
+                            <i class="flaticon-hosting"></i>            
+                            <div class="content">
+                                <div class="title">{{ pacote.title }}</div>
+                                <div class="description">{{ pacote.description }}</div>
+                            </div>            
+                        </div>
+                    </td>
+                    <td> {{ pacote.dataCriacao | date }} </td>
+                    <td> {{ pacote.dataVencimento | date }} </td>
+                    <td>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Editar</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
     </div>
 </div>

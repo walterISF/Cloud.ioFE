@@ -33,6 +33,10 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'app/view/ajuda.html',
             controller: 'ajudaController'
         })
+        .when('/cadastrarDroplet', {
+            templateUrl:'app/view/cadastrarDroplet.html',
+            controller: 'cadastrarDropletController'
+        })
         .otherwise({
             templateUrl: 'app/view/404.html'
         });

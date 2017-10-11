@@ -673,4 +673,8 @@
 .form_select_custom option{
     font-size: 18px;
 }
+.imgDroplet
+{
+    width: 80px;
+}
 

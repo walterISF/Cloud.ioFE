@@ -5,6 +5,38 @@
 <h2>Gerenciar Droplet</h2>
 
 <!-- CONTEUDO -->
-<div>
-	<a href="#!cadastrarDroplet">Tester</a>
+<!-- CONTEUDO -->
+<div class="container">
+    <div class="row">
+        <table class="table table-hover">
+            <thead class="trCabecalho">
+                <th>Descrição</th>
+                <th>Criado</th>
+                <th>Vencimento</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="droplet in droplets">
+                    <td>
+                        <div class="table-item-description">            
+                            <i class="flaticon-hosting"></i>            
+                            <div class="content">
+                                <div class="title">{{ droplet.title }}</div>
+                                <div class="description">{{ droplet.description }}</div>
+                            </div>            
+                        </div>
+                    </td>
+                    <td> {{ droplet.dataCriacao | date }} </td>
+                    <td> {{ droplet.dataVencimento | date }} </td>
+                    <td>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#!cadastrarDroplet"><i class="fa fa-pencil"></i> Editar</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
 </div>

@@ -5,237 +5,241 @@
 <h2>Criar Droplet</h2>
 
 <!-- CONTEUDO -->
-<div>
-	 <div class="container" style="margin-top: 20px;">
-     
-    <div class="container">
-        <h3 style="font-weight: 300;">Escolha o Sistema Operacional</h3>
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
+<div class="container" onload="init()">
+  
+  <!--- SISTEMA OPERACIONAL -->
+  <div class="container">
+    <h3>Escolha o Sistema Operacional</h3>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
           <div class="selectImg img-os">
-          <img src="src/img/windows8.png" width="80">
+          <img src="src/img/windows8.png" class="imgDroplet">
           <h6>Windows</h6>
           </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/ubuntu.png" width="80">
-          <h6>Windows</h6>
-          </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" width="80">
-          <h6>Windows</h6>
-          </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" width="80">
-          <h6>Windows</h6>
-          </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" width="80">
-          <h6>Windows</h6>
-          </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-lg-2 text-center">
-          <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="" width="80">
-          <h6>Windows</h6>
-          </div>
-            <select class="form-control form_select_custom" id="">
-              <option>Windows 10</option>
-              <option>Windows 8</option>
-              <option>Windows 8.1</option>
-              <option>Windows 7</option>
-            </select>
-        </div>
-        </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
         </div>
       </div>
-
-    <div class="container">
-      <h3 style="font-weight: 300;">Escolha a Região do Datacenter</h3>
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-md-12 col-md-offset-3 text-center">
-          <form class="form-horizontal well" role="form">
-            <div class="row">
-              <div class="col-md-2">
-                <img src="src/img/br.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Brazil</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <img src="src/img/us.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>United States</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-               <div class="col-md-2">
-                <img src="src/img/in.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>India</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-               <div class="col-md-2">
-                <img src="src/img/fr.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>France</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-               <div class="col-md-2">
-                <img src="src/img/il.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Israel</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-               <div class="col-md-2">
-                <img src="src/img/de.svg" class="img-responsive img-radio checkImg" width="80">
-                <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Germany</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-            </div>
-          </form>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/windows8.png" class="imgDroplet">
+          <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/windows8.png" class="imgDroplet">
+          <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/windows8.png" class="imgDroplet">
+          <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/windows8.png" class="imgDroplet">
+          <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/windows8.png" class="imgDroplet">
+          <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container" style="margin-top: 15px;">
-      <h3 style="font-weight: 300;">Escolha o Plano</h3>
-      <div class="row">
-        <div class="col-md-12 col-md-offset-3 text-center">
-          <form class="form-horizontal well" role="form">
-            <div class="row">
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>10</h1><h6 style="font-weight: 400;">,00</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>15</h1><h6 style="font-weight: 400;">,95</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>20</h1><h6 style="font-weight: 400;">,45</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>35</h1><h6 style="font-weight: 400;">,00</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>50</h1><h6 style="font-weight: 400;">,00</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-2">
-                <div class="top-plan-item text-center img-plan">
-                <h5 style="font-weight: 400;">R$</h5><h1>75</h1><h6 style="font-weight: 400;">,99</h6>
-                <h6 style="font-weight: 400;">R$0,015/hora</h6>
-                </div>
-                <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
+    <!--- REGIAO DATACENTER -->
+<div class="container">
+  <h3>Escolha a Região do Datacenter</h3>
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3 text-center">
+      <form class="form-horizontal well" role="form">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/br.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Brazil</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
             </div>
-          </form>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/us.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>United States</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/in.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>India</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/fr.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>France</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/il.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Israel</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="form-group">
+              <img src="src/img/de.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
+              <button type="button" class="btn btn-primary btn-radio selectImg check-region"><h6>Germany</h6></button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
+  </div>
+</div>
+<!-- ESCOLHA DE PLANO -->
+<div class="container">
+  <h3>Escolha o Plano</h3>
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3 text-center">
+      <form class="form-horizontal well" role="form">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-2">
+              <div class="top-plan-item text-center img-plan">
+                <h5>R$</h5><h1>10</h1><h6>,00</h6>
+                <h6>R$0,015/hora</h6>
+              </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="top-plan-item text-center img-plan">
+              <h5>R$</h5><h1>10</h1><h6>,00</h6>
+              <h6>R$0,015/hora</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="top-plan-item text-center img-plan">
+              <h5>R$</h5><h1>10</h1><h6>,00</h6>
+              <h6>R$0,015/hora</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="top-plan-item text-center img-plan">
+              <h5>R$</h5><h1>10</h1><h6>,00</h6>
+              <h6>R$0,015/hora</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="top-plan-item text-center img-plan">
+              <h5>R$</h5><h1>10</h1><h6>,00</h6>
+              <h6>R$0,015/hora</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="top-plan-item text-center img-plan">
+              <h5>R$</h5><h1>10</h1><h6>,00</h6>
+              <h6>R$0,015/hora</h6>
+            </div>
+            <button type="button" class="btn btn-primary btn-plan selectImg  bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
+            <input type="checkbox" id="" class="hidden item-none">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-      <div class="col-md-12 col-md-offset-3 custom-title-inline">
-      <div class="row">
-      <div class="col-md-6">
+<div class="col-md-12 col-md-offset-3 custom-title-inline">
+  <div class="row">
+    <div class="col-md-6">
       <h3>Escolha Serviço Adicional</h3>
-      </div>
-       <div class="col-md-6">
-      <h3>Escolha o Nome da Droplet</h3>
-      </div>
-      </div>
-      </div>
-      <div class="container">
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-md-12 col-md-offset-3">
-          <form class="form-horizontal well" role="form">
-            <div class="row">
-              <div class="col-md-3  text-center">
-                <div class="esquerda-button-add-services img-services">Conexão Privada</div>
-                <button type="button" class="btn btn-primary btn-services selectImg  direita-button-add-services"><h6>Adicionar</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-3  text-center">
-                <div class="esquerda-button-add-services img-services">Conexão Privada</div>
-                <button type="button" class="btn btn-primary btn-services selectImg  direita-button-add-services"><h6>Adicionar</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-custom" id="exampleFormControlInput1" placeholder="Ubuntu-58474-us" style="margin-bottom: 10px;">
-                  <a href="#" >Gerar nome aleatório</a>
-              </div>
-              </div>
-            </form>
-            </div>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <div class="esquerda-button-add-services img-services">Conexão Privada</div>
+          <button type="button" class="btn btn-primary btn-services selectImg  direita-button-add-services"><h6>Adicionar</h6></button>
+          <input type="checkbox" id="" class="hidden item-none">
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="esquerda-button-add-services img-services">Conexão Privada</div>
+          <button type="button" class="btn btn-primary btn-services selectImg  direita-button-add-services"><h6>Adicionar</h6></button>
+          <input type="checkbox" id="" class="hidden item-none">
         </div>
       </div>
     </div>
+    <div class="col-md-6">
+      <div class="row">
+        <h3>Escolha o Nome da Droplet</h3>
+        <div class="form-group col-md-12">
+          <input type="text" class="form-control form-control-custom" id="exampleFormControlInput1" placeholder="Ubuntu-58474-us">
+          <a href="#" >Gerar nome aleatório</a>
+        </div>
+      </div>
+    </div>
+  </div>
  </div>
 
 

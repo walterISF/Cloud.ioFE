@@ -292,6 +292,9 @@
     border-radius: 4px 4px 0 0;
 }
 
+.selectImg.active{
+    opacity: 1;
+}
 .check-custom {
 
     display: block;
@@ -584,7 +587,7 @@
 .btn-cadastrar:hover, .btn-cadastrar:focus {
     opacity: 1;
     color: white;
-    background-color: rgba(51, 255, 153, 1);
+    background-color: #225964;
     outline: none !important;
     font-style: bold;
 }

@@ -5,7 +5,7 @@
 <h2>Criar Droplet</h2>
 
 <!-- CONTEUDO -->
-<div class="container" onload="init()">
+<div class="container" data-ng-init="init()">
   
   <!--- SISTEMA OPERACIONAL -->
   <div class="container">
@@ -14,8 +14,23 @@
       <div class="col-sm-6 col-md-4 col-lg-2 text-center">
         <div class="form-group">
           <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
+          <img src="src/img/windows.png" class="imgDroplet">
           <h6>Windows</h6>
+          </div>
+          <select class="form-control form_select_custom" id="">
+            <option>Selecione a Versão</option>
+            <option>Windows 10</option>
+            <option>Windows 8</option>
+            <option>Windows 8.1</option>
+            <option>Windows 7</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+        <div class="form-group">
+          <div class="selectImg img-os">
+          <img src="src/img/linux.png" class="imgDroplet">
+          <h6>Linux</h6>
           </div>
           <select class="form-control form_select_custom" id="">
             <option>Windows 10</option>
@@ -28,64 +43,8 @@
       <div class="col-sm-6 col-md-4 col-lg-2 text-center">
         <div class="form-group">
           <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
-          <h6>Windows</h6>
-          </div>
-          <select class="form-control form_select_custom" id="">
-            <option>Windows 10</option>
-            <option>Windows 8</option>
-            <option>Windows 8.1</option>
-            <option>Windows 7</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
-        <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
-          <h6>Windows</h6>
-          </div>
-          <select class="form-control form_select_custom" id="">
-            <option>Windows 10</option>
-            <option>Windows 8</option>
-            <option>Windows 8.1</option>
-            <option>Windows 7</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
-        <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
-          <h6>Windows</h6>
-          </div>
-          <select class="form-control form_select_custom" id="">
-            <option>Windows 10</option>
-            <option>Windows 8</option>
-            <option>Windows 8.1</option>
-            <option>Windows 7</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
-        <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
-          <h6>Windows</h6>
-          </div>
-          <select class="form-control form_select_custom" id="">
-            <option>Windows 10</option>
-            <option>Windows 8</option>
-            <option>Windows 8.1</option>
-            <option>Windows 7</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 text-center">
-        <div class="form-group">
-          <div class="selectImg img-os">
-          <img src="src/img/windows8.png" class="imgDroplet">
-          <h6>Windows</h6>
+          <img src="src/img/chromeos.png" class="imgDroplet">
+          <h6>ChromeOS</h6>
           </div>
           <select class="form-control form_select_custom" id="">
             <option>Windows 10</option>

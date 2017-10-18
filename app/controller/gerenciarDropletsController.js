@@ -1,4 +1,5 @@
-app.controller('gerenciarDropletsController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl){
+app.controller('gerenciarDropletsController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl)
+{
 
     $scope.droplets = 
     [

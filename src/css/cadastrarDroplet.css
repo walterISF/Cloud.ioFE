@@ -273,7 +273,7 @@
     display: none;
 }
 
-.selectImg {
+.selectImg, .btn-radio {
     display: block;
     width: 100%;
     padding-top: 1px;

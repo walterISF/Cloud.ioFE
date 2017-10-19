@@ -112,29 +112,17 @@ app.controller('cadastrarDropletController', ['$scope', '$http', 'apiUrl', funct
 
         $(function () 
         {
-            $('.btn-os').click(function(e) 
-            {
-                $('.btn-os').not(this).removeClass('active')
-                    .siblings('input').prop('checked',false)
-                    .siblings('.img-os').css('opacity','0.5');
-                    
-                $(this).addClass('active')
-                    .siblings('input').prop('checked',true)
-                    .siblings('.img-os').css('opacity','1');
-            });
-        });
-
-        $(function () 
-        {
             $('.form_select_custom').on('change', function(e) 
             {
                 $('.img-os').not(this).removeClass('active')
                     .siblings('input').prop('checked',false)
                     .siblings('.img-os').css('opacity','0.5');
+                    $('.form_select_custom').not(this).removeClass('active');
                     
                 $(this).parent().find(".selectImg").addClass('active')
                     .siblings('input').prop('checked',true)
                     .siblings('.img-os').css('opacity','1');
+                $(this).addClass('active');
             });
 
             $(".selectImg").click(function(e) 

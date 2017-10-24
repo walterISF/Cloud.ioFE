@@ -2,9 +2,84 @@
 <div ng-include src="'app/view/header.html'"></div>
 
 <!-- TITULO DO TEMPLATE -->
-<h2>Faturas</h2>
+<h2 style="margin-bottom: 20px; margin-top: 15px;">Faturas</h2>
 
 <!-- CONTEUDO -->
-<div>
-	
+<div class="container">
+    <div class="row">
+        <table class="table table-hover">
+            <thead class="trCabecalho">
+                <th>Descrição</th>
+                <th>Valor Total</th>
+                <th>Vencimento</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fatura in faturas">
+                    <td>
+                        <div class="table-item-description">            
+                            <i class="flaticon-hosting"></i>            
+                            <div class="content">
+                                <div class="title">Fatura Num. {{ fatura.id }}</div>
+                                <div class="description">{{ fatura.description }}</div>
+                            </div>            
+                        </div>
+                    </td>
+                    <td>{{fatura.valor}}</td>
+                    <td>{{fatura.dataVencimento | date}}</td>
+                    <td>
+                            <button class="btn btn-primary" id="btn-mensagem">Exibir Fatura Completa</button>
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
 </div>
+
+
+<div class="modal fade" id="modal-mensagem">
+   <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="margin-left: 3px;">Fatura Num. {{fatura.id}} 488484929</h4>
+                 <h6 class="modal-title" style="font-weight: 200;">Venc. {{fatura.dataVencimento | date}} Outubro/2017</h6>
+          </div>
+            <div class="modal-body">
+                
+    				<div class="text-center">
+      					<h5>Produtos Contratados</h5>
+    				</div>
+    			
+                <hr>
+            <div class="row" style="font-weight: 200;">
+    				<div class="col">
+      					- Pacote Premium 484445
+    				</div>
+    			<div class="col text-right">
+      				R$ 100,40
+    			</div>
+  			</div>
+  			<div class="row" style="font-weight: 200;">
+    				<div class="col">
+      					- Monitoramento Platinum
+    				</div>
+    			<div class="col text-right">
+      				R$ 134,55
+    			</div>
+  			</div>
+            </div>
+            <div class="modal-footer text-center">
+            	<div class="row" style="font-weight: 200;">
+    				<div class="col-12">
+                <h2>Valor Total: R$ 234,95</h2>
+    			</div>
+    			<div class="col-12" style="color: green;">
+      				FATURA PAGA
+    			</div>
+  			</div>
+            </div>
+         </div>
+    </div>
+ </div>

@@ -2,7 +2,7 @@
 <div ng-include src="'app/view/header.html'"></div>
 
 <!-- TITULO DO TEMPLATE -->
-<h2>Pacotes Contratados</h2>
+<h2 style="margin-bottom: 20px; margin-top: 15px;">Pacotes Contratados</h2>
 
 <!-- CONTEUDO -->
 <div class="container">
@@ -10,7 +10,7 @@
         <table class="table table-hover">
             <thead class="trCabecalho">
                 <th>Descrição</th>
-                <th>Criado</th>
+                <th>Criado em</th>
                 <th>Vencimento</th>
                 <th></th>
             </thead>
@@ -28,11 +28,7 @@
                     <td> {{ pacote.dataCriacao | date }} </td>
                     <td> {{ pacote.dataVencimento | date }} </td>
                     <td>
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Editar</a>
-                            <a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Excluir</a>
-                        </div>
+                        
                     </td>
                 </tr>
             </tbody>

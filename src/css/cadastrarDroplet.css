@@ -288,12 +288,13 @@
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    margin-bottom: -1px;
     border-radius: 4px 4px 0 0;
+    margin-bottom: -2.9px;
 }
 
 .selectImg.active{
     opacity: 1;
+    border-color: grey;
 }
 .check-custom {
 

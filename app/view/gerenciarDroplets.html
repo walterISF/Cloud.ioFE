@@ -2,7 +2,7 @@
 <div ng-include src="'app/view/header.html'"></div>
 
 <!-- TITULO DO TEMPLATE -->
-<h2>Gerenciar Droplet</h2>
+<h2 style="margin-bottom: 20px; margin-top: 15px;">Gerenciar Droplet</h2>
 
 <!-- CONTEUDO -->
 <!-- CONTEUDO -->
@@ -10,10 +10,10 @@
     <div class="row">
         <table class="table table-hover">
             <thead class="trCabecalho">
-                <th>Descrição</th>
-                <th>Criado</th>
-                <th>Vencimento</th>
-                <th></th>
+                <th>Nome</th>
+                <th>Endereço IP</th>
+                <th>Criado em</th>
+                <th>Tags</th>
             </thead>
             <tbody>
                 <tr ng-repeat="droplet in droplets">
@@ -26,8 +26,8 @@
                             </div>            
                         </div>
                     </td>
-                    <td> {{ droplet.dataCriacao | date }} </td>
-                    <td> {{ droplet.dataVencimento | date }} </td>
+                    <td> {{ droplet.enderecoIp}} </td>
+                    <td> {{ droplet.dataCriacao}} </td>
                     <td>
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
                         <div class="dropdown-menu">

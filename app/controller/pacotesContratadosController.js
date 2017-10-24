@@ -3,17 +3,35 @@ app.controller('pacotesContratadosController', ['$scope', '$http', 'apiUrl', fun
     $scope.pacotes = 
     [
         {
-            title: 'Batata',
-            description: 'Pao de Batata',
+            title: 'ubuntu-512mb-ny3-01-test',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
             dataCriacao: new Date('2013' , '08', '12'),
             dataVencimento: new Date('2013' , '12', '08')
         },
         {
-            title: 'Batata2',
-            description: 'Pao de Batata2',
+            title: 'ubuntu-512mb-ny3-01-test',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
             dataCriacao: new Date('2013' , '08', '12'),
             dataVencimento: new Date('2013' , '12', '08')
-        }
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-test',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            dataCriacao: new Date('2013' , '08', '12'),
+            dataVencimento: new Date('2013' , '12', '08')
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-test',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            dataCriacao: new Date('2013' , '08', '12'),
+            dataVencimento: new Date('2013' , '12', '08')
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-test',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            dataCriacao: new Date('2013' , '08', '12'),
+            dataVencimento: new Date('2013' , '12', '08')
+        },
             
     ]
 }]);

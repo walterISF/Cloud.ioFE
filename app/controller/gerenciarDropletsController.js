@@ -4,16 +4,106 @@ app.controller('gerenciarDropletsController', ['$scope', '$http', 'apiUrl', func
     $scope.droplets = 
     [
         {
-            title: 'Batata',
-            description: 'Pao de Batata',
-            dataCriacao: new Date('2013' , '08', '12'),
-            dataVencimento: new Date('2013' , '12', '08')
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
         },
         {
-            title: 'Batata2',
-            description: 'Pao de Batata2',
-            dataCriacao: new Date('2013' , '08', '12'),
-            dataVencimento: new Date('2013' , '12', '08')
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
+        },
+        {
+            title: 'ubuntu-512mb-ny3-01-teste',
+            description: '512 GB / 20GB / NYC3 - Ubuntu 16.4.1 x64',
+            enderecoIp: '45.55.82.243',
+            dataCriacao: '2 anos atrás'
         }
             
     ]

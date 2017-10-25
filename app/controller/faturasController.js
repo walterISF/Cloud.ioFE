@@ -1,5 +1,13 @@
-app.controller('faturasController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl)
+app.controller('faturasController', ['$scope', '$http', 'ServiceFatura', function($scope, $http, ServiceFatura)
 {
+
+    ServiceFatura.getDatabase()
+    .then(function(data){
+       console.log(data.data);
+    })
+    .catch(function(err){
+        console.log(err);
+    })
     
 $scope.faturas = 
     [
@@ -36,13 +44,19 @@ $scope.faturas =
             
     ]
 
-    $(document).ready(function(){
-    $(".btn").click(function(){
-        $("#modal-mensagem").modal('show');
-    });
-});
+    $scope.openModal = function(dados)
+    {
+        $("#mdMensagem").modal("show");
+        console.log(dados);
+    }
 
 
-}]);
+}]).factory('ServiceFatura',function($http){
+    return {
+       getDatabase: function(){
+          return $http.get("https://api.coinmarketcap.com/v1/ticker/?limit=3");
+       }
+    };
+  })
 
 	

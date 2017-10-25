@@ -1,10 +1,14 @@
-app.factory('pcService', ['$http', function($http){
-    $http.get("http://url_exemplo")
-    .success(function(data){
-        return data;
-    })
-    .error(function(err){
-        return err;
-    })
-}])
+/*angular.module('faturas', [])
+.factory('ServiceFatura', ['$http', function($http){
+    return {
+       getFatura: function(){
+           $http.get("https://api.coinmarketcap.com/v1/ticker/?limit=3")
+          .success(function (data) {
+            return data;
+          });
+       }
+    };
+  }])*/
+
+
 

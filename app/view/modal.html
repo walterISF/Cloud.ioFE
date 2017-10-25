@@ -1,0 +1,64 @@
+<!-- Modal -->
+<div class="modal fade" id="mdConfirmacao" tabindex="-1" role="dialog" aria-labelledby="lblMdTittle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lblMdTittle">Confirmação</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Faturas -->
+<div class="modal fade" id="mdMensagem">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="margin-left: 3px;">Fatura Num. {{fatura.id}} 488484929</h4>
+                <h6 class="modal-title" style="font-weight: 200;">Venc. {{fatura.dataVencimento | date}} Outubro/2017</h6>
+            </div>
+            <div class="modal-body">                 
+                <div class="text-center">
+                    <h5>Produtos Contratados</h5>
+                </div>                 
+                <div class="row" style="font-weight: 200;">
+                    <div class="col">
+                        - Pacote Premium 484445
+                    </div>
+                    <div class="col text-right">
+                        R$ 100,40
+                    </div>
+                </div>
+                <div class="row" style="font-weight: 200;">
+                    <div class="col">
+                        - Monitoramento Platinum
+                    </div>
+                    <div class="col text-right">
+                        R$ 134,55
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <div class="row" style="font-weight: 200;">
+                    <div class="col-12">
+                        <h2>Valor Total: R$ 234,95</h2>
+                    </div>
+                    <div class="col-12" style="color: green;">
+                        FATURA PAGA
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

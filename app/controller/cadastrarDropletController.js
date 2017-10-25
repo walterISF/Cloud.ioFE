@@ -1,4 +1,4 @@
-app.controller('cadastrarDropletController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl)
+app.controller('cadastrarDropletController', function($scope, $http, apiUrl)
 {
     $scope.plans = [
         
@@ -138,7 +138,7 @@ app.controller('cadastrarDropletController', ['$scope', '$http', 'apiUrl', funct
         });
     }
 
-}]);
+});
 
 
 

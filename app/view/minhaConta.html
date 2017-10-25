@@ -6,4 +6,29 @@
 
 <!-- CONTEUDO -->
 <div>
+	<div class="container">
+		<h3>Dados Pessoais</h3>
+	<hr>
+	<h4>Nome: {{client.nome}}</h4>
+	<h4>CPF: {{client.cpf}}</h4>
+	<h4>Nascimento: {{client.data_aniversario}}</h4>
+	<br>
+	<div class="row">
+		<div class="col-6">
+			<h3>Endereço</h3>
+		</div>
+		<div class="col-6">
+			<h5 style="color: blue; margin-top: 10px;" class="text-right"><a href="http://www.website.com" title="Editar"><i style="margin-right: 0.5em; color: blue;" class="fa fa-pencil icon-4x"></i>Editar</a></h3>
+		</div>
+	</div>
+	<hr>
+	<h4>{{client.endereco.logradouro}},{{client.endereco.numero}}, {{client.endereco.bairro}}</h4>
+	<h4>{{client.endereco.codigo_postal}} - {{client.endereco.cidade}}/{{client.endereco.estado}}</h4>
+	<h4>{{client.endereco.pais}}</h4>
+	<br>
+	<h3>Dados de Pagamento</h3>
+	<hr>
+	<h4>Cartão:</h4>
+	<h4>**** **** **** {{client.dados_pagamento.final_cartao}} - {{client.dados_pagamento.validade_cartao}} - {{client.dados_pagamento.bandeira}}</h4>
+	</div>
 </div>

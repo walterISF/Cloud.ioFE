@@ -37,6 +37,14 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'app/view/cadastrarDroplet.html',
             controller: 'cadastrarDropletController'
         })
+        .when('/minhaConta', {
+            templateUrl:'app/view/minhaConta.html',
+            controller: 'minhaContaController'
+        })
+        .when('/configuracoes', {
+            templateUrl:'app/view/configuracoes.html',
+            controller: 'configuracoesController'
+        })
         .otherwise({
             templateUrl: 'app/view/404.html'
         });

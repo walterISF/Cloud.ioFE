@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Chat 64</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23.4175375,56.8774453 C26.1488234,57.5640672 29.0270672,57.9310345 32,57.9310345 C49.673112,57.9310345 64,44.9627307 64,28.9655172 C64,12.9683038 49.673112,0 32,0 C14.326888,0 0,12.9683038 0,28.9655172 C0,36.8037757 3.4395557,43.9148627 9.02698892,49.1295869 L4.38165081,57.9198086 L23.4175375,56.8774453 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chat-64">
+            <g id="message" transform="translate(0.000000, 2.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Oval-11" fill="#227FBB" xlink:href="#path-1"></use>
+                <path d="M4,49.9999163 C-2.15846404,44.7206277 -6,37.2491504 -6,28.9655172 C-6,12.9683038 8.32688801,0 26,0 C43.673112,0 58,12.9683038 58,28.9655172 C58,44.9627307 43.673112,57.9310345 26,57.9310345 L26,62.0689655 L4,62.0689655 L4,49.9999163 Z" id="Oval-12" fill="#2C97DE" mask="url(#mask-2)"></path>
+                <ellipse id="Oval-13" fill="#FFFFFF" mask="url(#mask-2)" cx="24" cy="22.7586207" rx="4" ry="4.13793103"></ellipse>
+                <ellipse id="Oval-13" fill="#FFFFFF" mask="url(#mask-2)" cx="44" cy="22.7586207" rx="4" ry="4.13793103"></ellipse>
+                <path d="M34,44.6873316 C40.8002881,44.6873316 44.7738845,36.4114696 44.7738845,36.4114696 L23.2261155,36.4114696 C23.2261155,36.4114696 27.1997119,44.6873316 34,44.6873316 Z" id="Oval-15" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Browser 64</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Browser-64">
+            <g id="browser">
+                <rect id="Rectangle-295" fill="#ECF0F1" x="0" y="0" width="64" height="64" rx="4"></rect>
+                <rect id="Rectangle-296" fill="#FFFFFF" x="4" y="10" width="56" height="50"></rect>
+                <rect id="Rectangle-297" fill="#DADEDF" x="8" y="14" width="14" height="18"></rect>
+                <path d="M26,14 L56,14 L56,22 L26,22 L26,14 Z M26,26 L56,26 L56,32 L26,32 L26,26 Z M8,36 L56,36 L56,44 L8,44 L8,36 Z M8,48 L56,48 L56,56 L8,56 L8,48 Z" id="Rectangle-297" fill="#DADEDF"></path>
+                <circle id="Oval-115" fill="#E94B35" cx="4" cy="4" r="2"></circle>
+                <circle id="Oval-115" fill="#F2C500" cx="10" cy="4" r="2"></circle>
+                <circle id="Oval-115" fill="#1ECE6D" cx="16" cy="4" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -15,31 +15,36 @@ $scope.faturas =
         	id: 12536489,
             description: 'Outubro/2017',
             valor: 'R$234,56',
-            dataVencimento: new Date('2013' , '11', '12')
+            dataVencimento: new Date('2013' , '11', '12'),
+            status: 'Paga'
         },
         {
         	id: 12536489,
             description: 'Outubro/2017',
             valor: 'R$234,56',
-            dataVencimento: new Date('2013' , '11', '12')
+            dataVencimento: new Date('2013' , '11', '12'),
+            status: 'Paga'
         },
         {
         	id: 12536489,
             description: 'Outubro/2017',
             valor: 'R$234,56',
-            dataVencimento: new Date('2013' , '11', '12')
+            dataVencimento: new Date('2013' , '11', '12'),
+            status: 'Paga'
         },
         {
         	id: 12536489,
             description: 'Outubro/2017',
             valor: 'R$234,56',
-            dataVencimento: new Date('2013' , '11', '12')
+            dataVencimento: new Date('2013' , '11', '12'),
+            status: 'Paga'
         },
         {
         	id: 12536489,
             description: 'Outubro/2017',
             valor: 'R$234,56',
-            dataVencimento: new Date('2013' , '11', '12')
+            dataVencimento: new Date('2013' , '11', '12'),
+            status: 'Paga'
         }
             
     ]
@@ -51,12 +56,6 @@ $scope.faturas =
     }
 
 
-}]).factory('ServiceFatura',function($http){
-    return {
-       getDatabase: function(){
-          return $http.get("https://api.coinmarketcap.com/v1/ticker/?limit=3");
-       }
-    };
-  })
+}]);
 
 	

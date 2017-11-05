@@ -45,6 +45,10 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'app/view/configuracoes.html',
             controller: 'configuracoesController'
         })
+        .when('/cadastroCliente', {
+            templateUrl:'app/view/cadastroCliente.html',
+            controller: 'cadastroClienteController'
+        })
         .otherwise({
             templateUrl: 'app/view/404.html'
         });

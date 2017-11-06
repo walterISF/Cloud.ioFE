@@ -1,0 +1,174 @@
+<!-- INCLUSAO HEAD -->
+<div ng-include src="'app/view/header.html'"></div>
+
+<!-- TITULO DO TEMPLATE -->
+<h2 style="margin-bottom: 20px; margin-top: 15px;">Criar uma Conta</h2>
+
+<!-- CONTEUDO -->
+<div class="container">
+	<form id="maskForm">
+	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pessoais</h2>
+	  <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="inputNome">Nome</label>
+	      <input type="text" class="form-control" id="inputNome1" placeholder="Nome">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="inputSobrenome">Sobrenome</label>
+	      <input type="text" class="form-control" id="inputSobrenome1" placeholder="Sobrenome">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="form-group col-md-3">
+	      <label for="inputGender">Sexo</label>
+	      <select id="inputGender" class="form-control">
+	        <option selected>Selecionar...</option>
+	        <option>Feminino</option>
+	       	<option>Masculino</option>
+	      </select>
+	    </div>
+	    <div class="form-group col-md-3">
+	      <label for="inputCpf">CPF</label>
+	      <input type="number" class="form-control" id="inputCpf" name="inputCpf" placeholder="CPF">
+	    </div>
+	    <div class="form-group col-md-3">
+	      <label for="inputRg">RG</label>
+	      <input type="text" class="form-control" id="inputRg" placeholder="RG">
+	    </div>
+	    <div class="form-group col-md-3">
+	      <label for="inputEmail">E-mail</label>
+	      <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+	    </div>
+	  </div>
+	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Endereço</h2>
+	  <div class="form-row">
+	  	<div class="form-group col-md-5">
+	      <label for="inputRua">Rua</label>
+	      <input type="text" class="form-control" id="inputRua" name="inputRua" placeholder="Rua">
+	    </div>
+	    <div class="form-group col-md-2">
+	      <label for="inputNum">Número</label>
+	      <input type="number" class="form-control" id="inputNum" name="inputNum" placeholder="Número">
+	    </div>
+	    <div class="form-group col-md-5">
+	      <label for="inputComplemento">Complemento</label>
+	      <input type="text" class="form-control" id="inputComplemento" name="inputComplemento" placeholder="Complemento">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="form-group col-md-5">
+	      <label for="inputBairro">Bairro</label>
+	      <input type="text" class="form-control" id="inputBairro" name="inputBairro" placeholder="Bairro">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputCep">CEP</label>
+	      <input type="number" class="form-control" id="inputCep" name="inputCep" placeholder="CEP">
+	    </div>
+	    <div class="form-group col-md-3">
+	      <label for="inputCidade">Cidade</label>
+	      <input type="text" class="form-control" id="inputCidade" name="inputCidade" placeholder="Cidade">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="form-group col-md-4">
+	      <label for="inputEstado">Estado</label>
+	      <select id="inputEstado" class="form-control">
+	        <option selected>Selecionar...</option>
+	        <option>Acre</option>
+			<option>Alagoas</option>
+			<option>Amapá</option>
+			<option>Amazonas</option>
+			<option>Bahia</option>
+			<option>Ceará</option>
+			<option>Distrito Federal</option>
+			<option>Espírito Santo</option>
+			<option>Goiás</option>
+			<option>Maranhão</option>
+			<option>Mato Grosso</option>
+			<option>Mato Grosso do Sul</option>
+			<option>Minas Gerais</option>
+			<option>Pará</option>
+			<option>Paraíba</option>
+			<option>Paraná</option>
+			<option>Pernambuco</option>
+			<option>Piauí</option>
+			<option>Rio de Janeiro</option>
+			<option>Rio Grande do Norte</option>
+			<option>Rio Grande do Sul</option>
+			<option>Rondônia</option>
+			<option>Roraima</option>
+			<option>Santa Catarina</option>
+			<option>São Paulo</option>
+			<option>Sergipe</option>
+			<option>Tocantins</option>
+	      </select>
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputPais">Pais</label>
+	      <select id="inputPais" class="form-control">
+	        <option selected>Selecionar...</option>
+	        <option>Brasil</option>
+	      </select>
+	    </div>
+	  </div>
+	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Login</h2>
+	  <div class="form-row">
+	  	<div class="form-group col-md-4">
+	      <label for="inputLogin">Nome de Usuário</label>
+	      <input type="text" class="form-control" id="inputLogin" name="inputLogin" placeholder="Nome de Usuário">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputSenha">Senha</label>
+	      <input type="password" class="form-control" id="inputSenha" name="inputSenha" placeholder="Senha">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputConfirmarSenha">Confirmar Senha</label>
+	      <input type="password" class="form-control" id="inputConfirmarSenha" name="inputConfirmarSenha" placeholder="Confirmar Senha">
+	    </div>
+	  </div>
+	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pagamento</h2>
+	  <div class="form-row">
+	  	<div class="form-group col-md-4">
+	      <label for="inputTipoPagamento">Tipo de Pagamento</label>
+	      <select id="inputTipoPagamento" class="form-control">
+	        <option selected>Selecionar...</option>
+	        <option>Cartão de Crédito</option>
+	      </select>
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputNumeroCartao">Número do Cartão</label>
+	      <input type="number" class="form-control" id="inputNumeroCartao" name="inputNumeroCartao" placeholder="Número do Cartão">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputBandeira">Bandeira</label>
+	      <input type="text" class="form-control" id="inputBandeira" name="inputBandeira" placeholder="Bandeira">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	    <div class="form-group col-md-4">
+	      <label for="inputCodigoSeguranca">Código de Segurança</label>
+	      <input type="number" class="form-control" id="inputCodigoSeguranca" name="inputCodigoSeguranca" placeholder="Código de Segurança">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputDataValidade">Data de Validade</label>
+	      <input type="text" class="form-control" id="inputDataValidade" name="inputDataValidade" placeholder="Data de Validade">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputNomeCartao">Nome no Cartão</label>
+	      <input type="text" class="form-control" id="inputNomeCartao" name="inputNomeCartao" placeholder="Nome no Cartão">
+	    </div>
+	  </div>
+	 
+	 <br>
+	 <div class="form-row">
+	 	<button type="button" class="btn btn-cadastrar"><h6>Concluir</h6></button>
+        <input type="button" id="" class="hidden item-none">
+	 </div>
+
+	</form>
+
+<br><br>
+
+
+
+</div>

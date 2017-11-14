@@ -1,13 +1,12 @@
 app.controller('faturasController', ['$scope', '$http', 'ServiceFatura', function($scope, $http, ServiceFatura)
 {
-
-    ServiceFatura.getDatabase()
-    .then(function(data){
-       console.log(data.data);
-    })
-    .catch(function(err){
-        console.log(err);
-    })
+    $scope.test = "teste";
+    ServiceFatura.getServer().then(function(response){
+        $scope.test = response.data;
+        console.log(response.data);
+    }, function(erro){
+        console.log(erro);
+    });
     
 $scope.faturas = 
     [

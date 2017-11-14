@@ -2,7 +2,7 @@ var app = angular.module('app', ['ngRoute']);
 
 app.value('apiUrl', 'http://localhost:8080');
 
-app.config(function($routeProvider, $httpProvider){
+app.config(function($routeProvider, $httpProvider, $locationProvider){
 
     $routeProvider
         .when('/', {
@@ -56,6 +56,8 @@ app.config(function($routeProvider, $httpProvider){
         .otherwise({
             templateUrl: 'app/view/404.html'
         });
+
+        $locationProvider.html5Mode(true);
 });
 
 app.run(function(){

@@ -1,10 +1,15 @@
 
 app.factory('ServiceFatura',function($http){
-  return {
-     getDatabase: function(){
-        return $http.get("https://api.coinmarketcap.com/v1/ticker/?limit=3");
-     }
-  };
+
+  var urlBase = "http://localhost:8080/";
+  var dataFactory = {};
+
+  dataFactory.getServer = function(){
+    return $http.get( urlBase + "servidor");
+  }
+
+    return dataFactory;
+
 })
 
 

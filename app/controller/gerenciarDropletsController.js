@@ -1,6 +1,14 @@
-app.controller('gerenciarDropletsController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl)
+app.controller('gerenciarDropletsController', ['$scope', '$http', 'ServiceDroplet', function($scope, $http, ServiceDroplet)
 {
 
+    callback = function(data){
+        console.log(data);
+    }
+    error = function(data){
+        console.log(data);
+    }
+    
+    ServiceDroplet.getDroplet(callback, error);
     $scope.droplets = 
     [
         {

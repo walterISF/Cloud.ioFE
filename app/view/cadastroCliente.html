@@ -3,110 +3,107 @@
 
 <!-- TITULO DO TEMPLATE -->
 <h2 style="margin-bottom: 20px; margin-top: 15px;">Criar uma Conta</h2>
-
+{{cliente}}
 <!-- CONTEUDO -->
 <div class="container">
-	<form id="maskForm">
+	<form name="formCliente">
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pessoais</h2>
 	  <div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="inputNome">Nome</label>
-	      <input type="text" class="form-control" id="inputNome1" placeholder="Nome">
+	    <div class="form-group col-md-4">
+	      <label for="txtNome">Nome</label>
+	      <input type="text" ng-model="cliente.nomeCliente" class="form-control" name="txtNome" required>
 	    </div>
-	    <div class="form-group col-md-6">
-	      <label for="inputSobrenome">Sobrenome</label>
-	      <input type="text" class="form-control" id="inputSobrenome1" placeholder="Sobrenome">
+	    <div class="form-group col-md-4">
+	      <label for="txtSobrenme">Sobrenome</label>
+	      <input type="text" ng-model="cliente.sobrenomeCliente" class="form-control" name="txtSobrenme">
+			</div>
+	  	<div class="form-group col-md-4">
+	      <label for="txtSexo">Sexo</label>
+	      <select ng-model="cliente.sexo" name="txtSexo" class="form-control">
+	        <option value="F">Feminino</option>
+	       	<option value="M">Masculino</option>
+	      </select>
 	    </div>
 	  </div>
 	  <div class="form-row">
-	  	<div class="form-group col-md-3">
-	      <label for="inputGender">Sexo</label>
-	      <select id="inputGender" class="form-control">
-	        <option selected>Selecionar...</option>
-	        <option>Feminino</option>
-	       	<option>Masculino</option>
-	      </select>
+	    <div class="form-group col-md-4">
+	      <label for="txtcpf">CPF</label>
+	      <input ng-model="cliente.cpf" type="number" class="form-control" name="txtcpf">
 	    </div>
-	    <div class="form-group col-md-3">
-	      <label for="inputCpf">CPF</label>
-	      <input type="number" class="form-control" id="inputCpf" name="inputCpf" placeholder="CPF">
-	    </div>
-	    <div class="form-group col-md-3">
-	      <label for="inputRg">RG</label>
-	      <input type="text" class="form-control" id="inputRg" placeholder="RG">
-	    </div>
-	    <div class="form-group col-md-3">
-	      <label for="inputEmail">E-mail</label>
-	      <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
-	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="txtEmail">E-mail</label>
+	      <input type="email" ng-model="cliente.loginCliente.email" class="form-control" name="txtEmail">
+			</div>
+	    <div class="col-md-4">
+				<label for="txtTelefone">Telefone</label>
+				<input type="tel" ui-mask="+99(99)99999-9999" ng-model="cliente.telefoneList[0].numeroTelefone" class="form-control" name="txtTelefone">
+			</div>			
 	  </div>
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Endereço</h2>
 	  <div class="form-row">
 	  	<div class="form-group col-md-5">
-	      <label for="inputRua">Rua</label>
-	      <input type="text" class="form-control" id="inputRua" name="inputRua" placeholder="Rua">
+	      <label for="txtLogradouro">Rua</label>
+	      <input type="text" ng-model="cliente.enderecoList[0].logradouro" class="form-control" name="txtLogradouro">
 	    </div>
 	    <div class="form-group col-md-2">
-	      <label for="inputNum">Número</label>
-	      <input type="number" class="form-control" id="inputNum" name="inputNum" placeholder="Número">
+	      <label for="txtNumero">Número</label>
+	      <input type="number" ng-model="cliente.enderecoList[0].numeroEndereco" class="form-control" name="txtNumero">
 	    </div>
 	    <div class="form-group col-md-5">
-	      <label for="inputComplemento">Complemento</label>
-	      <input type="text" class="form-control" id="inputComplemento" name="inputComplemento" placeholder="Complemento">
+	      <label for="txtComplemento">Complemento</label>
+	      <input type="text" ng-model="cliente.enderecoList[0].complementoEndereco" class="form-control" name="txtComplemento">
 	    </div>
 	  </div>
 	  <div class="form-row">
 	  	<div class="form-group col-md-5">
-	      <label for="inputBairro">Bairro</label>
-	      <input type="text" class="form-control" id="inputBairro" name="inputBairro" placeholder="Bairro">
+	      <label for="txtBairro">Bairro</label>
+	      <input type="text" ng-model="cliente.enderecoList[0].bairro" class="form-control" name="txtBairro">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputCep">CEP</label>
-	      <input type="number" class="form-control" id="inputCep" name="inputCep" placeholder="CEP">
+	      <label for="txtCep">CEP</label>
+	      <input type="number" ng-model="cliente.enderecoList[0].cep" class="form-control" name="txtCep">
 	    </div>
 	    <div class="form-group col-md-3">
-	      <label for="inputCidade">Cidade</label>
-	      <input type="text" class="form-control" id="inputCidade" name="inputCidade" placeholder="Cidade">
+	      <label for="txtCidade">Cidade</label>
+	      <input type="text" ng-model="cliente.enderecoList[0].cidade" class="form-control" name="txtCidade">
 	    </div>
 	  </div>
 	  <div class="form-row">
 	  	<div class="form-group col-md-4">
-	      <label for="inputEstado">Estado</label>
-	      <select id="inputEstado" class="form-control">
-	        <option selected>Selecionar...</option>
-	        <option>Acre</option>
-			<option>Alagoas</option>
-			<option>Amapá</option>
-			<option>Amazonas</option>
-			<option>Bahia</option>
-			<option>Ceará</option>
-			<option>Distrito Federal</option>
-			<option>Espírito Santo</option>
-			<option>Goiás</option>
-			<option>Maranhão</option>
-			<option>Mato Grosso</option>
-			<option>Mato Grosso do Sul</option>
-			<option>Minas Gerais</option>
-			<option>Pará</option>
-			<option>Paraíba</option>
-			<option>Paraná</option>
-			<option>Pernambuco</option>
-			<option>Piauí</option>
-			<option>Rio de Janeiro</option>
-			<option>Rio Grande do Norte</option>
-			<option>Rio Grande do Sul</option>
-			<option>Rondônia</option>
-			<option>Roraima</option>
-			<option>Santa Catarina</option>
-			<option>São Paulo</option>
-			<option>Sergipe</option>
-			<option>Tocantins</option>
+	      <label for="slEstado">Estado</label>
+	      <select ng-model="cliente.enderecoList[0].estado" name="slEstado" class="form-control">
+	        <option value="Acre">Acre</option>
+					<option value="Alagoas">Alagoas</option>
+					<option value="Amapá">Amapá</option>
+					<option value="Amazonas">Amazonas</option>
+					<option value="Bahia">Bahia</option>
+					<option value="Ceará">Ceará</option>
+					<option value="Distrito Federal">Distrito Federal</option>
+					<option value="Espírito Santo">Espírito Santo</option>
+					<option value="Goiás">Goiás</option>
+					<option value="Maranhão">Maranhão</option>
+					<option value="Mato Grosso">Mato Grosso</option>
+					<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+					<option value="Minas Gerais">Minas Gerais</option>
+					<option value="Pará">Pará</option>
+					<option value="Paraíba">Paraíba</option>
+					<option value="Paraná">Paraná</option>
+					<option value="Pernambuco">Pernambuco</option>
+					<option value="Piauí">Piauí</option>
+					<option value="Rio de Janeiro">Rio de Janeiro</option>
+					<option value="Rio Grande do Norte">Rio Grande do Norte</option>
+					<option value="Rio Grande do Sul">Rio Grande do Sul</option>
+					<option value="Rondônia">Rondônia</option>
+					<option value="Roraima">Roraima</option>
+					<option value="Santa Catarina">Santa Catarina</option>
+					<option value="São Paulo">São Paulo</option>
+					<option value="Sergipe">Sergipe</option>
+					<option value="Tocantins">Tocantins</option>
 	      </select>
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputPais">Pais</label>
-	      <select id="inputPais" class="form-control">
-	        <option selected>Selecionar...</option>
+	      <label for="slPais">Pais</label>
+	      <select id="slPais" ng-model="cliente.enderecoList[0].pais" class="form-control">
 	        <option>Brasil</option>
 	      </select>
 	    </div>
@@ -114,16 +111,16 @@
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Login</h2>
 	  <div class="form-row">
 	  	<div class="form-group col-md-4">
-	      <label for="inputLogin">Nome de Usuário</label>
-	      <input type="text" class="form-control" id="inputLogin" name="inputLogin" placeholder="Nome de Usuário">
+	      <label for="txtNomeUsuario">Nome de Usuário</label>
+	      <input type="text" ng-model="cliente.loginCliente.nomeUsuario" class="form-control" name="txtNomeUsuario">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputSenha">Senha</label>
-	      <input type="password" class="form-control" id="inputSenha" name="inputSenha" placeholder="Senha">
+	      <label for="txtSenha">Senha</label>
+	      <input type="password" ng-model="cliente.loginCliente.senha" class="form-control" name="txtSenha">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputConfirmarSenha">Confirmar Senha</label>
-	      <input type="password" class="form-control" id="inputConfirmarSenha" name="inputConfirmarSenha" placeholder="Confirmar Senha">
+	      <label for="txtConfirmarSenha">Confirmar Senha</label>
+	      <input type="password" class="form-control" name="txtConfirmarSenha">
 	    </div>
 	  </div>
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pagamento</h2>
@@ -131,37 +128,21 @@
 	  	<div class="form-group col-md-4">
 	      <label for="inputTipoPagamento">Tipo de Pagamento</label>
 	      <select id="inputTipoPagamento" class="form-control">
-	        <option selected>Selecionar...</option>
 	        <option>Cartão de Crédito</option>
 	      </select>
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="inputNumeroCartao">Número do Cartão</label>
-	      <input type="number" class="form-control" id="inputNumeroCartao" name="inputNumeroCartao" placeholder="Número do Cartão">
+	      <input type="number" class="form-control" ng-model="cliente.cartaoDeCreditoList[0].numeroDoCartao" name="inputNumeroCartao">
 	    </div>
 	    <div class="form-group col-md-4">
-	      <label for="inputBandeira">Bandeira</label>
-	      <input type="text" class="form-control" id="inputBandeira" name="inputBandeira" placeholder="Bandeira">
+	      <label for="txtCodigoSeguranca">Código de Segurança</label>
+	      <input type="number" class="form-control" ng-model="cliente.cartaoDeCreditoList[0].numeroDeSeguranca" name="txtCodigoSeguranca">
 	    </div>
-	  </div>
-	  <div class="form-row">
-	    <div class="form-group col-md-4">
-	      <label for="inputCodigoSeguranca">Código de Segurança</label>
-	      <input type="number" class="form-control" id="inputCodigoSeguranca" name="inputCodigoSeguranca" placeholder="Código de Segurança">
-	    </div>
-	    <div class="form-group col-md-4">
-	      <label for="inputDataValidade">Data de Validade</label>
-	      <input type="text" class="form-control" id="inputDataValidade" name="inputDataValidade" placeholder="Data de Validade">
-	    </div>
-	    <div class="form-group col-md-4">
-	      <label for="inputNomeCartao">Nome no Cartão</label>
-	      <input type="text" class="form-control" id="inputNomeCartao" name="inputNomeCartao" placeholder="Nome no Cartão">
-	    </div>
-	  </div>
-	 
+	  </div>	 
 	 <br>
 	 <div class="form-row">
-	 	<button type="button" class="btn btn-cadastrar"><h6>Concluir</h6></button>
+	 	<button type="submit" class="btn btn-cadastrar" ng-click="save()" ng-disabled="formCliente.$invalid"><h6>Concluir</h6></button>
         <input type="button" id="" class="hidden item-none">
 	 </div>
 

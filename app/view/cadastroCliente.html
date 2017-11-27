@@ -6,13 +6,14 @@
 {{cliente}}
 <!-- CONTEUDO -->
 <div class="container">
-	<form name="formCliente">
+	<form novalidate name="formCliente">
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pessoais</h2>
 	  <div class="form-row">
 	    <div class="form-group col-md-4">
 	      <label for="txtNome">Nome</label>
-	      <input type="text" ng-model="cliente.nomeCliente" class="form-control" name="txtNome" required>
+				<input type="text" ng-model="cliente.nomeCliente" class="form-control" name="txtNome" required>
 	    </div>
+			<span ng-show="formCliente.txtNome.$touched && formCliente.txtNome.$invalid">The name is required.</span>
 	    <div class="form-group col-md-4">
 	      <label for="txtSobrenme">Sobrenome</label>
 	      <input type="text" ng-model="cliente.sobrenomeCliente" class="form-control" name="txtSobrenme">
@@ -28,7 +29,7 @@
 	  <div class="form-row">
 	    <div class="form-group col-md-4">
 	      <label for="txtcpf">CPF</label>
-	      <input ng-model="cliente.cpf" type="number" class="form-control" name="txtcpf">
+	      <input ng-model="cliente.cpf" ui-mask="999.999.999-99" type="number" class="form-control" name="txtcpf">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="txtEmail">E-mail</label>
@@ -137,7 +138,7 @@
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="txtCodigoSeguranca">Código de Segurança</label>
-	      <input type="number" class="form-control" ng-model="cliente.cartaoDeCreditoList[0].numeroDeSeguranca" name="txtCodigoSeguranca">
+	      <input type="number" maxlength="4" class="form-control" ng-model="cliente.cartaoDeCreditoList[0].numeroDeSeguranca" name="txtCodigoSeguranca">
 	    </div>
 	  </div>	 
 	 <br>

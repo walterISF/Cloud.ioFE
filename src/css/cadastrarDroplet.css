@@ -589,13 +589,13 @@
     cursor: pointer;
 }
 
-.btn-cadastrar:hover, .btn-cadastrar:focus {
+/* .btn-cadastrar:hover, .btn-cadastrar:focus {
     opacity: 1;
     color: white;
     background-color: #225964;
     outline: none !important;
     font-style: bold;
-}
+} */
 
 .btn-cadastrar.active {
     opacity: 1;
@@ -684,5 +684,9 @@
 .imgDroplet
 {
     width: 80px;
+}
+
+.red-border-class{
+    border: 1px solid red;
 }
 

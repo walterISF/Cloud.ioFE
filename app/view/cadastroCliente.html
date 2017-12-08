@@ -1,5 +1,5 @@
 <!-- INCLUSAO HEAD -->
-<div ng-include src="'app/view/header.html'"></div>
+<!-- <div ng-include src="'app/view/header.html'"></div> -->
 
 <!-- TITULO DO TEMPLATE -->
 <h2 style="margin-bottom: 20px; margin-top: 15px;">Criar uma Conta</h2>
@@ -11,9 +11,8 @@
 	  <div class="form-row">
 	    <div class="form-group col-md-4">
 	      <label for="txtNome">Nome</label>
-				<input type="text" ng-model="cliente.nomeCliente" class="form-control" name="txtNome" required>
+				<input type="text" ng-class="{'red-border-class': formCliente.txtNome.$invalid && formCliente.txtNome.$touched}" ng-model="cliente.nomeCliente" class="form-control" name="txtNome" required>
 	    </div>
-			<span ng-show="formCliente.txtNome.$touched && formCliente.txtNome.$invalid">The name is required.</span>
 	    <div class="form-group col-md-4">
 	      <label for="txtSobrenme">Sobrenome</label>
 	      <input type="text" ng-model="cliente.sobrenomeCliente" class="form-control" name="txtSobrenme">
@@ -29,7 +28,7 @@
 	  <div class="form-row">
 	    <div class="form-group col-md-4">
 	      <label for="txtcpf">CPF</label>
-	      <input ng-model="cliente.cpf" ui-mask="999.999.999-99" type="number" class="form-control" name="txtcpf">
+	      <input ng-model="cliente.cpf" ui-mask="999.999.999-99" type="text" class="form-control" name="txtcpf">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="txtEmail">E-mail</label>
@@ -111,17 +110,13 @@
 	  </div>
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Login</h2>
 	  <div class="form-row">
-	  	<div class="form-group col-md-4">
+	  	<div class="form-group col-md-6">
 	      <label for="txtNomeUsuario">Nome de Usuário</label>
 	      <input type="text" ng-model="cliente.loginCliente.nomeUsuario" class="form-control" name="txtNomeUsuario">
 	    </div>
-	    <div class="form-group col-md-4">
+	    <div class="form-group col-md-6">
 	      <label for="txtSenha">Senha</label>
 	      <input type="password" ng-model="cliente.loginCliente.senha" class="form-control" name="txtSenha">
-	    </div>
-	    <div class="form-group col-md-4">
-	      <label for="txtConfirmarSenha">Confirmar Senha</label>
-	      <input type="password" class="form-control" name="txtConfirmarSenha">
 	    </div>
 	  </div>
 	  <h2 style="margin-bottom: 20px; margin-top: 15px;">Dados Pagamento</h2>
@@ -143,7 +138,7 @@
 	  </div>	 
 	 <br>
 	 <div class="form-row">
-	 	<button type="submit" class="btn btn-cadastrar" ng-click="save()" ng-disabled="formCliente.$invalid"><h6>Concluir</h6></button>
+	 	<button type="submit" class="btn btn-cadastrar" ng-click="save()"  ng-disabled="formCliente.$invalid"><h6>Concluir</h6></button>
         <input type="button" id="" class="hidden item-none">
 	 </div>
 

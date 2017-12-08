@@ -1,71 +1,22 @@
-app.controller('cadastrarDropletController', function($scope, $http, apiUrl)
+app.controller('cadastrarDropletController', function($scope, $http, ServiceDropletCadastro)
 {
-    $scope.plans = [
-        
-            {        
-                productsForPlan:
-                [
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    }
-                ],
-                service: 
-                {
-                    serviceName: "Nome do Servico",
-                    price: 10.00
-        
-                }        
-            },
-            {        
-                productsForPlan:
-                [
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    },
-                    {
-                        productName: "8GB Memory",
-                        description: "8GB RAM Memory",
-                        idCategory: 1
-                    }
-                ],
-                service: 
-                {
-                    serviceName: "Nome do Servico",
-                    price: 10.00
-        
-                }        
-            }
-        
-        ]
+    $scope.sistemasOperacionais;
+    $scope.datacenters;
+    
+    ServiceDropletCadastro.getSistemaOperacional( function(data) {
+        $scope.sistemasOperacionais = data.data;
+        $(select).selectpicker('refresh');
+    }, function(erro){
+        console.log(erro);
+    });
+    
+    ServiceDropletCadastro.getDatacenter( function(data) {
+        $scope.datacenters = data.data;
+        $(select).selectpicker('refresh');
+    }, function(erro){
+        console.log(erro);
+    });
+
     $scope.init = function()
     {
         $(function () 
@@ -136,7 +87,7 @@ app.controller('cadastrarDropletController', function($scope, $http, apiUrl)
                     .siblings('.img-os').css('opacity','1');
             });
         });
-    }
+    };
 
 });
 

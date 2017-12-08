@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ui.mask']);
+var app = angular.module('app', ['ngRoute', 'ui.mask', 'ui.bootstrap', 'MinhasDiretivas']);
 
 app.value('apiUrl', 'http://localhost:8080');
 

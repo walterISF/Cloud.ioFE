@@ -11,22 +11,8 @@
     <form novalidate name="formDroplet">
     <h3>Escolha o Sistema Operacional</h3>
     <div class="row">
-        <sistema-operacional ng-repeat="sistOperacional in sistemasOperacionais" so="{{sistOperacional.nomeSistemaOperacional}}" imagem="{{sistOperacional.caminhoIcone}}">
+      <sistema-operacional class="col-sm-6 col-md-4 col-lg-2 text-center" ng-repeat="sistOperacional in sistemasOperacionais" so="{{sistOperacional.nomeSistemaOperacional}}" imagem="{{sistOperacional.caminhoIcone}}" items="sistOperacional.versaoSistemaOperacional">
         </sistema-operacional>
-        <div class="col-sm-6 col-md-4 col-lg-2 text-center">
-          <div class="form-group">
-              <div class="selectImg img-os">
-                  <img src="src/img/linux.png" class="imgDroplet">
-                  <h6 class="ng-binding">Linux</h6>
-              </div>
-              <select class="form-control form_select_custom" id="">
-                  <option value="Windows 10">Windows 10</option>
-                  <option value="Windows 8">Windows 8</option>
-                  <option value="Windows 8.1">Windows 8.1</option>
-                  <option value="Windows 7">Windows 7</option>
-              </select>
-          </div>
-      </div>
     </div>
   </div>
     <!--- REGIAO DATACENTER -->
@@ -36,15 +22,8 @@
       <div class="col-md-12 col-md-offset-3 text-center">
         <form class="form-horizontal well" role="form">
           <div class="row">
-            <datacenter ng-repeat="datacenter in datacenters" titulo="{{datacenter.nomeServidor}}" imagem="{{datacenter.caminhoIcone}}">
+            <datacenter class="col-sm-6 col-md-4 col-lg-2" ng-repeat="datacenter in datacenters" titulo="{{datacenter.nomeServidor}}" imagem="{{datacenter.caminhoIcone}}">
             </datacenter>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="form-group">
-                <img src="src/img/us.svg" class="img-responsive img-radio checkImg" class="imgDroplet">
-                <button type="button" class="btn btn-primary btn-radio  check-region"><h6>United States</h6></button>
-                <input type="checkbox" id="" class="hidden item-none">
-              </div>
-            </div>
           </div>
         </form>
       </div>
@@ -57,54 +36,8 @@
       <div class="col-md-12 col-md-offset-3 text-center">
         <form class="form-horizontal well" role="form">
           <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-2">
-                <div class="top-plan-item text-center img-plan">
-                  <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                  <h6>R$0,015/hora</h6>
-                </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="top-plan-item text-center img-plan">
-                <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                <h6>R$0,015/hora</h6>
-              </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="top-plan-item text-center img-plan">
-                <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                <h6>R$0,015/hora</h6>
-              </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="top-plan-item text-center img-plan">
-                <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                <h6>R$0,015/hora</h6>
-              </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="top-plan-item text-center img-plan">
-                <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                <h6>R$0,015/hora</h6>
-              </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-2">
-              <div class="top-plan-item text-center img-plan">
-                <h5>R$</h5><h1>10</h1><h6>,00</h6>
-                <h6>R$0,015/hora</h6>
-              </div>
-              <button type="button" class="btn btn-primary btn-plan   bottom-plan-item"><h6>1GB Memory</h6><h6>1 vCPU</h6><h6>20GB SSD Disk</h6><h6>1TB Transfer</h6></button>
-              <input type="checkbox" id="" class="hidden item-none">
-            </div>
+            <plano ng-repeat="plano in planos" item="plano" class="col-sm-6 col-md-4 col-lg-2">
+            </plano>
           </div>
         </form>
       </div>
@@ -112,21 +45,6 @@
   </div>
   <div class="col-md-12 col-md-offset-3 custom-title-inline">
     <div class="row">
-      <div class="col-md-6">
-        <h3>Escolha Serviço Adicional</h3>
-        <div class="row">
-          <div class="col-md-6 text-center">
-            <div class="esquerda-button-add-services img-services">Conexão Privada</div>
-            <button type="button" class="btn btn-primary btn-services   direita-button-add-services"><h6>Adicionar</h6></button>
-            <input type="checkbox" id="" class="hidden item-none">
-          </div>
-          <div class="col-md-6 text-center">
-            <div class="esquerda-button-add-services img-services">Conexão Privada</div>
-            <button type="button" class="btn btn-primary btn-services   direita-button-add-services"><h6>Adicionar</h6></button>
-            <input type="checkbox" id="" class="hidden item-none">
-          </div>
-        </div>
-      </div>
       <div class="col-md-6">
         <div class="row">
           <h3>Escolha o Nome da Droplet</h3>

@@ -2,17 +2,25 @@ app.controller('cadastrarDropletController', function($scope, $http, ServiceDrop
 {
     $scope.sistemasOperacionais;
     $scope.datacenters;
+    $scope.planos;
     
+    ServiceDropletCadastro.getDatacenter( function(data) {
+        $scope.datacenters = data.data;
+        $scope.init();
+    }, function(erro){
+        console.log(erro);
+    });
+
     ServiceDropletCadastro.getSistemaOperacional( function(data) {
         $scope.sistemasOperacionais = data.data;
-        $(select).selectpicker('refresh');
+        $scope.init();
     }, function(erro){
         console.log(erro);
     });
     
-    ServiceDropletCadastro.getDatacenter( function(data) {
-        $scope.datacenters = data.data;
-        $(select).selectpicker('refresh');
+    ServiceDropletCadastro.getPlanos( function(data) {
+        $scope.planos = data.data;
+        $scope.init();
     }, function(erro){
         console.log(erro);
     });

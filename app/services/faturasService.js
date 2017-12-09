@@ -1,11 +1,10 @@
 
-app.factory('ServiceFatura',function($http){
+app.factory('ServiceFatura',function($http, apiUrl){
 
-  var urlBase = "http://localhost:8080/";
   var dataFactory = {};
 
   dataFactory.getServer = function(){
-    return $http.get( urlBase + "servidor");
+    return $http.get( apiUrl + "servidor");
   }
 
     return dataFactory;

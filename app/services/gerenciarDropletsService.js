@@ -1,9 +1,9 @@
 
-app.factory('ServiceDroplet', ['$http' ,function($http){
+app.factory('ServiceDroplet', ['$http' ,function($http, apiUrl){
     var obj = {};
     
     obj.getDroplet = function(callback, error){
-        $http.get("http://localhost:8080/servidor").then(callback, error);
+        $http.get(apiUrl + "servidor").then(callback, error);
     }
     return obj;
   }]);

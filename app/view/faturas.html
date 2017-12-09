@@ -29,10 +29,12 @@
                     <td>{{fatura.valor}}</td>
                     <td>{{fatura.dataVencimento | date}}</td>
                     <td>
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href=""><i class="fa fa-search"></i> Visualizar</a>
-                            <a class="dropdown-item" href="" ng-click="openModal(fatura)"><i class="fa fa-money"></i> Pagar</a>
+                        <a class="nav-link dropdown-toggle" href="#/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mais
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#/"><i class="fa fa-search"></i> Visualizar</a>
+                                <a class="dropdown-item" href="#/" ng-click="openModal(fatura)"><i class="fa fa-money"></i> Pagar</a>
                         </div>
                     </td>
                 </tr>

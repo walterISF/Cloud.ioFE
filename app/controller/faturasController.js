@@ -1,6 +1,5 @@
 app.controller('faturasController', ['$scope', '$http', 'ServiceFatura', function($scope, $http, ServiceFatura)
 {
-    $scope.test = "teste";
     ServiceFatura.getServer().then(function(response){
         $scope.test = response.data;
         console.log(response.data);

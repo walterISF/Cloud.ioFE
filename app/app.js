@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute', 'ui.mask', 'ui.bootstrap', 'MinhasDiretivas']);
 
-app.value('apiUrl', 'http://localhost:8080');
+app.value('apiUrl', 'http://localhost:8080/');
 
 app.config(function($routeProvider, $httpProvider, $locationProvider){
 

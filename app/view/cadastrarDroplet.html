@@ -3,39 +3,39 @@
 
 <!-- TITULO DO TEMPLATE -->
 <h2>Criar Droplet</h2>
-{{droplet}}
 <!-- CONTEUDO -->
-<div class="container" data-ng-init="init()">  
+<div class="container" data-ng-init="init()"> 
   <!--- SISTEMA OPERACIONAL -->
   <div class="container">
     <form novalidate name="formDroplet">
-    <h3>Escolha o Sistema Operacional</h3>
-    <div class="row">
-      <sistema-operacional class="col-sm-6 col-md-4 col-lg-2 text-center" ng-repeat="sistOperacional in sistemasOperacionais" so="{{sistOperacional.nomeSistemaOperacional}}" imagem="{{sistOperacional.caminhoIcone}}" items="sistOperacional.versaoSistemaOperacional">
+      <h3>Escolha o Sistema Operacional</h3>
+      <div class="row">
+        <sistema-operacional class="col-sm-6 col-md-4 col-lg-2 text-center" ng-repeat="sistOperacional in sistemasOperacionais" so="{{sistOperacional.nomeSistemaOperacional}}" imagem="{{sistOperacional.caminhoIcone}}" items="sistOperacional.versaoSistemaOperacional">
         </sistema-operacional>
-    </div>
-  </div>
-    <!--- REGIAO DATACENTER -->
-  <div class="container">
-    <h3>Escolha a Região do Datacenter</h3>
-    <div class="row">
-      <div class="col-md-12 col-md-offset-3 text-center">
-        <form class="form-horizontal well" role="form">
-          <div class="row">
-            <datacenter class="col-sm-6 col-md-4 col-lg-2" ng-repeat="datacenter in datacenters" titulo="{{datacenter.nomeServidor}}" imagem="{{datacenter.caminhoIcone}}">
-            </datacenter>
-          </div>
-        </form>
       </div>
     </div>
-  </div>
-  <!-- ESCOLHA DE PLANO -->
-  <div class="container">
-    <h3>Escolha o Plano</h3>
-    <div class="row">
-      <div class="col-md-12 col-md-offset-3 text-center">
-        <form class="form-horizontal well" role="form">
-          <div class="row">
+    <!--- REGIAO DATACENTER -->
+    <div class="container">
+      <h3>Escolha a Região do Datacenter</h3>
+      <div class="row">
+        <div class="col-md-12 col-md-offset-3 text-center">
+          <form class="form-horizontal well" role="form">
+            <div class="row">
+              <datacenter class="col-sm-6 col-md-4 col-lg-2" ng-repeat="datacenter in datacenters" titulo="{{datacenter.nomeServidor}}" imagem="{{datacenter.caminhoIcone}}">
+              </datacenter>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ESCOLHA DE PLANO -->
+    <div class="container">
+      <h3>Escolha o Plano</h3>
+      {{planoClicked | json}} 
+      <div class="row">
+        <div class="col-md-12 col-md-offset-3 text-center">
+          <form class="form-horizontal well" role="form">
+            <div class="row">
             <plano ng-repeat="plano in planos" item="plano" class="col-sm-6 col-md-4 col-lg-2">
             </plano>
           </div>
@@ -60,7 +60,7 @@
     <div class="row">
       <div class="col-md-12 col-md-offset-3">  
         <div class="col-md-12">              
-          <button type="button" class="btn btn-cadastrar"><h6>Cadastrar</h6></button>
+          <button type="button" ng-click="cadastro()" class="btn btn-cadastrar"><h6>Cadastrar</h6></button>
           <input type="button" id="" class="hidden item-none">
         </div>
       </div>

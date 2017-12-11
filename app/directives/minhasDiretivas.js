@@ -41,3 +41,15 @@ angular.module('MinhasDiretivas', [])
 
     return ddo;
 })
+.directive('fatura', function(){
+    var ddo = {};
+
+    ddo.restrict = 'AE';
+    ddo.transclude = true;
+    ddo.scope = {
+        item: '='
+    };
+    ddo.templateUrl = "app/directives/fatura.html";
+
+    return ddo;
+})

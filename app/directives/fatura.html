@@ -1,0 +1,20 @@
+<td>
+    <div class="table-item-description">            
+        <i class="flaticon-hosting"></i>            
+        <div class="content">
+            <div class="title">Fatura Num. {{ item._id }}</div>
+            <div class="description">{{ item.dataReferenciaFatura | date }}</div>
+        </div>            
+    </div>
+</td>
+<td>{{item.valorTotalFatura}}</td>
+<td>{{item.dataVencimentoFatura | date}}</td>
+<td>
+    <a class="nav-link dropdown-toggle" href="#/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Mais
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#/"><i class="fa fa-search"></i> Visualizar</a>
+            <a class="dropdown-item" href="#/" ng-click="openModal(fatura)"><i class="fa fa-money"></i> Pagar</a>
+    </div>
+</td>

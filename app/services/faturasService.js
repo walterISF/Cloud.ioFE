@@ -1,15 +1,15 @@
 
-app.factory('ServiceFatura',function($http, apiUrl){
+app.factory('ServiceFatura', ['$http', 'apiUrl' ,function($http, apiUrl){
 
-  var dataFactory = {};
+  var obj = {};
 
-  dataFactory.getServer = function(){
-    return $http.get( apiUrl + "servidor");
+  obj.getFatura = function(callback, error){
+    $http.get( apiUrl + "fatura/np/1").then(callback, error);
   }
 
-    return dataFactory;
+  return obj;
 
-})
+}]);
 
 
 

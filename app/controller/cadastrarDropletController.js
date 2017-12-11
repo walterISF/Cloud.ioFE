@@ -1,8 +1,10 @@
 app.controller('cadastrarDropletController', function($scope, $http, ServiceDropletCadastro)
 {
+
     $scope.sistemasOperacionais;
     $scope.datacenters;
     $scope.planos;
+    $scope.planoClicked;
     
     ServiceDropletCadastro.getDatacenter( function(data) {
         $scope.datacenters = data.data;
@@ -25,6 +27,20 @@ app.controller('cadastrarDropletController', function($scope, $http, ServiceDrop
         console.log(erro);
     });
 
+    $scope.changePlano = function(item){
+        alert('caiu');
+        console.log(item);
+    }
+
+    $scope.cadastro = function(){
+        $scope.droplet = 
+        {
+            sistemaOperacional: $scope.sistemasOperacionalClicked,
+            servidor: $scope.datacenterClicked,
+            plano: $scope.planoClicked        
+        }
+        console.log($scope.droplet);
+    }
     $scope.init = function()
     {
         $(function () 
@@ -96,7 +112,6 @@ app.controller('cadastrarDropletController', function($scope, $http, ServiceDrop
             });
         });
     };
-
 });
 
 

@@ -10,8 +10,16 @@
     <form novalidate name="formDroplet">
       <h3>Escolha o Sistema Operacional</h3>
       <div class="row">
-        <sistema-operacional class="col-sm-6 col-md-4 col-lg-2 text-center" ng-repeat="sistOperacional in sistemasOperacionais" so="{{sistOperacional.nomeSistemaOperacional}}" imagem="{{sistOperacional.caminhoIcone}}" items="sistOperacional.versaoSistemaOperacional">
-        </sistema-operacional>
+        <div class="col-sm-6 col-md-4 col-lg-2 text-center" ng-repeat="sistOperacional in sistemasOperacionais">
+            <div class="form-group">
+                <div class="selectImg img-os">
+                    <img src="{{sistOperacional.caminhoIcone}}" class="imgDroplet" ng-click="soClick(sistSelected)">
+                    <h6>{{sistOperacional.nomeSistemaOperacional}}</h6>
+                </div>
+                <select class="form-control form_select_custom" ng-change="changeSistOperacional(sistOperacional, sistSelected)" ng-model="sistSelected" ng-options="item for item in sistOperacional.versaoSistemaOperacional">
+                </select>
+            </div>
+        </div>
       </div>
     </div>
     <!--- REGIAO DATACENTER -->
@@ -21,8 +29,13 @@
         <div class="col-md-12 col-md-offset-3 text-center">
           <form class="form-horizontal well" role="form">
             <div class="row">
-              <datacenter class="col-sm-6 col-md-4 col-lg-2" ng-repeat="datacenter in datacenters" titulo="{{datacenter.nomeServidor}}" imagem="{{datacenter.caminhoIcone}}">
-              </datacenter>
+              <div class="col-sm-6 col-md-4 col-lg-2" ng-repeat="datacenter in datacenters">
+                  <div class="form-group">
+                      <img src="{{datacenter.caminhoIcone}}" class="img-responsive img-radio checkImg" class="imgDroplet">
+                      <button type="button" class="btn btn-primary btn-radio  check-region" ng-click="serverClick(datacenter)"><h6>{{datacenter.nomeServidor}}</h6></button>
+                      <input type="checkbox" id="" class="hidden item-none">
+                    </div>                
+              </div>
             </div>
           </form>
         </div>
@@ -30,14 +43,24 @@
     </div>
     <!-- ESCOLHA DE PLANO -->
     <div class="container">
-      <h3>Escolha o Plano</h3>
-      {{planoClicked | json}} 
+      <h3>Escolha o Plano</h3> 
       <div class="row">
         <div class="col-md-12 col-md-offset-3 text-center">
           <form class="form-horizontal well" role="form">
             <div class="row">
-            <plano ng-repeat="plano in planos" item="plano" class="col-sm-6 col-md-4 col-lg-2">
-            </plano>
+            <div ng-repeat="plano in planos" class="col-sm-6 col-md-4 col-lg-2">
+              <div class="top-plan-item text-center img-plan">
+                  <h5>R$</h5><h1>{{plano.valorPlano}}</h1><h6>,00</h6>
+                  <h6>R${{plano.valorPlanoHora}}/hora</h6>
+              </div>
+              <button type="button" class="btn btn-primary btn-plan bottom-plan-item" ng-click="planoClick(plano)">
+                  <h6> {{plano.memoriaRAM}} GB Memory</h6>
+                  <h6>{{plano.processamento}} vCPU</h6>
+                  <h6>{{plano.armazenamento}}GB SSD Disk</h6>
+                  <h6>{{plano.taxaTransferencia}}TB Transfer</h6>
+              </button>
+              <input type="checkbox" id="" class="hidden item-none">
+            </div>
           </div>
         </form>
       </div>
@@ -49,14 +72,13 @@
         <div class="row">
           <h3>Escolha o Nome da Droplet</h3>
           <div class="form-group col-md-12">
-            <input type="text" class="form-control form-control-custom" id="exampleFormControlInput1" placeholder="Ubuntu-58474-us">
-            <a href="#" >Gerar nome aleatório</a>
+            <input type="text" class="form-control form-control-custom" ng-model="nomeDroplet" id="txtNomeDroplet" placeholder="Ubuntu-58474-us">
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top: 20px;">
+  <div class="container">
     <div class="row">
       <div class="col-md-12 col-md-offset-3">  
         <div class="col-md-12">              

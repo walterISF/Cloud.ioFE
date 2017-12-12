@@ -13,6 +13,10 @@ app.factory('ServiceDropletCadastro', ['$http', 'apiUrl' ,function($http, apiUrl
     obj.getPlanos = function(callback, error){
         $http.get(apiUrl + "plano").then(callback, error);
     }
+    
+    obj.postDroplet = function(droplet, callback, error){
+        $http.post(apiUrl + "droplet", droplet).then(callback, error);
+    }
 
     return obj;
 }]);

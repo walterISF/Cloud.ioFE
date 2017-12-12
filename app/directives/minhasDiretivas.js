@@ -24,6 +24,11 @@ angular.module('MinhasDiretivas', [])
         titulo: '@',
         imagem: '@imagem'
     };
+    ddo.link =function (scope) {
+        scope.test = function () {
+            alert('Hello, world!');
+        };
+    }
     ddo.templateUrl =  'app/directives/regiaoDatacenter.html';
     return ddo;
 
@@ -35,7 +40,16 @@ angular.module('MinhasDiretivas', [])
     ddo.restrict = "AE";
     ddo.transclude = true;
     ddo.scope = {
-        item: '='
+        item: '=',
+        onButtonClick: '&'
+    };
+    ddo.link =function (scope) {
+        scope.buttonClicked = function (item) {
+            // Button was clicked in the directive
+            // Invoke callback function on the controller
+            console.log(item);
+            scope.onButtonClick(item);
+        };
     };
     ddo.templateUrl = "app/directives/plano.html";
 

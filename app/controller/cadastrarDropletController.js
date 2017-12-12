@@ -1,10 +1,10 @@
-app.controller('cadastrarDropletController', function($scope, $http, ServiceDropletCadastro)
+app.controller('cadastrarDropletController', function($scope, $http, $cookies, ServiceDropletCadastro)
 {
 
     $scope.sistemasOperacionais;
     $scope.datacenters;
     $scope.planos;
-    $scope.planoClicked;
+    $scope.sistSelected = [];
     
     ServiceDropletCadastro.getDatacenter( function(data) {
         $scope.datacenters = data.data;
@@ -27,20 +27,56 @@ app.controller('cadastrarDropletController', function($scope, $http, ServiceDrop
         console.log(erro);
     });
 
-    $scope.changePlano = function(item){
-        alert('caiu');
-        console.log(item);
+    $scope.planoClick = function(item){
+        $scope.planoClicked = item;
+    }
+
+    $scope.serverClick = function(item){
+        $scope.datacenterClicked = item;
+    }
+
+    $scope.soClick = function(item){
+        $scope.sistemasOperacionalClicked = item;
     }
 
     $scope.cadastro = function(){
+        console.log($cookies.getObject('cliente'));
         $scope.droplet = 
         {
-            sistemaOperacional: $scope.sistemasOperacionalClicked,
+            nomeDroplet: $scope.nomeDroplet,
+            sistemaOperacional: $scope.sistClicked,
             servidor: $scope.datacenterClicked,
             plano: $scope.planoClicked        
         }
-        console.log($scope.droplet);
+        //console.log($scope.droplet);
+        if($cookies.getObject('cliente') != '')
+        {
+            alert('dentro');
+            $scope.droplet.clientePessoaFisica = $cookies.getObject('cliente');
+            ServiceDropletCadastro.postDroplet($scope.droplet, function(data) {
+                console.log(data.data);
+            }, function(erro){
+                console.log(erro);
+            });
+        }
+        else
+        {
+            alert('fora');
+        }
     }
+
+    $scope.changeSistOperacional = function(sistemaOp, value)
+    {
+        $scope.sistSelected[0] = value;
+        $scope.sistClicked = 
+        {        
+            nomeSistemaOperacional: sistemaOp.nomeSistemaOperacional,       
+            versaoSistemaOperacional: $scope.sistSelected,    
+            caminhoIcone: sistemaOp.caminhoIcone
+        }
+    }
+
+
     $scope.init = function()
     {
         $(function () 

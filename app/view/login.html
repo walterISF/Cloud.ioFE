@@ -17,14 +17,14 @@
                     <h5>Acesso</h5>       
                 </div>     
                 <div class="form-group">
-                    <label for="ipEmail ">Email/CPF</label>
-                    <input type="text" class="form-control" id="ipEmail" placeholder="">
+                    <label for="ipEmail">Email/CPF</label>
+                    <input type="text" class="form-control" id="ipEmail" ng-model="email" placeholder="">
                 </div>        
                 <div class="form-group">
                     <label for="ipPassword">Password</label>
-                    <input type="password" class="form-control" id="ipPassword" placeholder="">
+                    <input type="password" class="form-control" ng-model="password" id="ipPassword" placeholder="">
                 </div>        
-                <button type="submit" class="btn btn-primary" ng-click="login( ' #!dashboard ' )">Entrar</button>
+                <button type="submit" class="btn btn-primary" ng-click="sigin()">Entrar</button>
                 <a style="margin-top: 5px;" href="cadastroCliente">Novo por Aqui? Crie uma Conta!</a>
             </div>
         </div>

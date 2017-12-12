@@ -1,4 +1,4 @@
-app.controller('cadastrarDropletController', function($scope, $http, $cookies, ServiceDropletCadastro)
+app.controller('cadastrarDropletController', function($scope, $http, $cookies, $location, ServiceDropletCadastro)
 {
 
     $scope.sistemasOperacionais;
@@ -54,6 +54,8 @@ app.controller('cadastrarDropletController', function($scope, $http, $cookies, S
             $scope.droplet.clientePessoaFisica = $cookies.getObject('cliente');
             ServiceDropletCadastro.postDroplet($scope.droplet, function(data) {
                 console.log(data.data);
+                alert('droplet cadastrado com sucesso');
+                $location.path("gerenciarDroplets");
             }, function(erro){
                 console.log(erro);
             });

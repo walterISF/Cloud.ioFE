@@ -1,4 +1,4 @@
-app.controller('institucionalController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl){
+app.controller('institucionalController', ['$scope',function($scope){
     
 
     

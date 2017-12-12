@@ -4,6 +4,7 @@ app.controller('faturasController', function($scope, $http, ServiceFatura)
     
     ServiceFatura.getFatura( function(data) {
         $scope.faturas = data.data;
+        console.log($scope.faturas);
     }, function(erro){
         console.log(erro);
     });

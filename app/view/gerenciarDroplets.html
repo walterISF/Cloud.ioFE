@@ -21,14 +21,14 @@
                         <div class="table-item-description">            
                             <i class="flaticon-hosting"></i>            
                             <div class="content">
-                                <div class="title">{{ droplet.title }}</div>
-                                <div class="description">{{ droplet.description }}</div>
+                                <div class="title">{{ droplet.nomeDroplet }}</div>
+                                <div class="description">{{ droplet.plano.memoriaRAM}}GB / {{ droplet.plano.armazenamento}}GB / {{droplet.sistemaOperacional.nomeSistemaOperacional}} - {{droplet.sistemaOperacional.versaoSistemaOperacional[0]}} </div>
                             </div>            
                         </div>
                     </td>
-                    <td> {{ droplet.enderecoIp}} </td>
-                    <td> {{ droplet.dataCriacao}} </td>
-                    <td>
+                    <td> 45.55.82.243 </td>
+                    <td> 2 anos atrás</td>
+                    <td class="tdDrop">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#!cadastrarDroplet"><i class="fa fa-pencil"></i> Editar</a>
@@ -40,3 +40,11 @@
         </table>    
     </div>
 </div>
+<script>
+        $('.dropdown-toggle').on('mouseover', function(){
+            $(this).parent().find('.dropdown-menu').css('display','block');
+        });
+        $('.tdDrop').on('mouseleave', function(){
+            $(this).find('.dropdown-menu').css('display','none');
+        });
+</script>

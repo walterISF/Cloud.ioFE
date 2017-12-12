@@ -51,7 +51,6 @@ app.controller('cadastrarDropletController', function($scope, $http, $cookies, S
         //console.log($scope.droplet);
         if($cookies.getObject('cliente') != '')
         {
-            alert('dentro');
             $scope.droplet.clientePessoaFisica = $cookies.getObject('cliente');
             ServiceDropletCadastro.postDroplet($scope.droplet, function(data) {
                 console.log(data.data);
@@ -61,7 +60,7 @@ app.controller('cadastrarDropletController', function($scope, $http, $cookies, S
         }
         else
         {
-            alert('fora');
+            console.log('sem cliente');
         }
     }
 

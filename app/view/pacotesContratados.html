@@ -20,13 +20,13 @@
                         <div class="table-item-description">            
                             <i class="flaticon-hosting"></i>            
                             <div class="content">
-                                <div class="title">{{ pacote.title }}</div>
-                                <div class="description">{{ pacote.description }}</div>
+                                <div class="title">{{ pacote.nomepacote }}</div>
+                                <div class="description">{{ pacote.plano.memoriaRAM}}GB / {{ pacote.plano.armazenamento}}GB / {{pacote.sistemaOperacional.nomeSistemaOperacional}} - {{pacote.sistemaOperacional.versaoSistemaOperacional[0]}}</div>
                             </div>            
                         </div>
                     </td>
-                    <td> {{ pacote.dataCriacao | date }} </td>
-                    <td> {{ pacote.dataVencimento | date }} </td>
+                    <td> {{ dataCriacao | date }} </td>
+                    <td> {{ dataVencimento | date }} </td>
                     <td>
                         
                     </td>

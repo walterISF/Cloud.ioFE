@@ -1,4 +1,4 @@
-app.controller('cadastroClienteController', ['$scope', '$http', 'ServiceClient', '$modal', function($scope, $http, ServiceClient,  $modal){
+app.controller('cadastroClienteController', ['$scope', '$http', 'ServiceClient', '$location', function($scope, $http, ServiceClient,  $location){
 
     $scope.cliente = {};
     $scope.cliente.enderecoList = [];
@@ -9,32 +9,23 @@ app.controller('cadastroClienteController', ['$scope', '$http', 'ServiceClient',
     $scope.save = function()
     {
 
-        // var modalInstance = $modal.open({
-        //     templateUrl: 'app/view/modal.html',
-        //     controller: 'cadastroClienteController',
-        //     resolve: {
-        //       items: function () {
-        //         return $scope.items;
-        //       }
-        //     }
-        //   });
-        
-        //   modalInstance.result.then(function (selectedItem) {
-        //     $scope.selected = selectedItem;
-        //   }, function () {
-        //     $log.info('Modal dismissed at: ' + new Date());
-        //   });
-        // $scope.cliente.status = "ATIVO";
-        // $scope.cliente.nomeCliente = $scope.cliente.nomeCliente + " " + $scope.cliente.sobrenomeCliente;
+        $scope.cliente.status = "ATIVO";
+        $scope.cliente.nomeCliente = $scope.cliente.nomeCliente + " " + $scope.cliente.sobrenomeCliente;
 
-        // ServiceClient.saveCliente($scope.cliente).then(function(response)
-        // {
-        //     console.log(response);
-        // }, 
-        // function(erro)
-        // {
-        //     console.log(erro);
-        // });
+        ServiceClient.saveClient($scope.cliente, function(data){
+            console.log(data.data);
+            $scope.resetForm();
+            $location.path('');
+        }, function(erro){
+            console.log(erro.data);
+        });
     }
+
+    $scope.resetForm = function ()
+    {
+        $('#formularioCliente').each(function(){
+            this.reset();
+        });
+    };
 
 }]);

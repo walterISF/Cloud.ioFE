@@ -1,17 +1,11 @@
 
-app.factory('ServiceClient',function($http){
+app.factory('ServiceClient',function($http, apiUrl){
     
-      var urlBase = "http://localhost:8080/";
-      var dataFactory = {};
+  var obj = {};
+  
+  obj.saveClient = function(cliente, callback, error){
+      $http.post(apiUrl + "cliente/pf", cliente).then(callback, error);
+  }
+  return obj;
     
-      dataFactory.getCliente = function(){
-        return $http.get( urlBase + "cliente/pf");
-      }
-
-      dataFactory.saveCliente = function(cliente){
-        return $http.post( urlBase + "cliente/pf", cliente );
-      }
-    
-        return dataFactory;
-    
-    })
+})

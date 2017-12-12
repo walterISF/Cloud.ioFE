@@ -13,7 +13,7 @@ app.controller('loginController',function($scope, ServiceLogin, $location, $cook
             if(client.data !== '' && client.data !== null && client.data !== undefined)
             {
                 $cookies.putObject('cliente', client.data);
-                $location.path('dashboard');
+                $location.path('gerenciarDroplets');
 
             }
         },

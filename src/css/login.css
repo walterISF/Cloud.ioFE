@@ -40,3 +40,84 @@ body, html, main
     background-color: #225964;
     border-color: #225964;
 }
+
+.fundoInst{
+    height: 500px;
+    background-image: url(../img/fundoInstitucional.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -200px;
+}
+
+.corPadrao{
+    background-color: transparent;
+}
+.divisoria
+{
+    width: 20%;
+    background-color: #225964;
+    height: 2px;
+    margin-bottom: 3em;
+}
+.corApp{
+    color: #225964;
+    font-weight: normal;
+    margin-top: 1em;
+}
+.dvPlano
+{
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+.dvValorPlano
+{
+    padding: 20px;
+}
+.atributosDefault
+{
+    font-style: oblique;
+    font-variant-caps: all-small-caps;
+    font-size: 16px;
+    text-align: center;
+}
+.btnConsultar
+{
+    background-color: #225964;
+    color: #fff;
+    cursor: pointer;
+}
+.cardAcao
+{
+    color: #fff;
+    padding: 10px;
+    text-align: center; 
+}
+
+.card:hover{
+    opacity: 0.7;
+}
+.footer
+{
+    height: 50px;
+    background-color: #f8f9fa;
+    width: 100%;
+    margin-top: 2em;
+}
+.faIcon
+{
+    font-size: 30px;
+}
+.spaceFooter
+{
+    margin-top: 10px;
+    text-align: center;
+}
+.imgProduto
+{
+    height: 100px;
+}
+.dropdown-toggle:hover .dropdown-menu {
+    display: block;
+}

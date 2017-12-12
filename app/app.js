@@ -51,7 +51,7 @@ app.config(function($routeProvider, $httpProvider, $locationProvider){
         })
         .when('/institucional', {
             templateUrl:'app/view/institucional.html',
-            controller: 'institucionalController.html'
+            controller: 'institucionalController'
         })
         .otherwise({
             templateUrl: 'app/view/404.html'

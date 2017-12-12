@@ -1,9 +1,9 @@
-app.factory('pcService', ['$http', function($http){
-    $http.get("http://url_exemplo")
-    .success(function(data){
-        return data;
-    })
-    .error(function(err){
-        return err;
-    })
-}])
+
+app.factory('ServicePacote', function($http, apiUrl, $cookies){
+    var obj = {};
+    
+    obj.getPacote = function(callback, error){
+        $http.get(apiUrl + "droplet/" + $cookies.getObject('cliente').cpf).then(callback, error);
+    }
+    return obj;
+  });

@@ -1,32 +1,45 @@
-app.controller('minhaContaController', ['$scope', '$http', 'apiUrl', function($scope, $http, apiUrl){
-    
+app.controller('minhaContaController', ['$scope', '$cookies', 'ServiceMinhaConta', '$location', function($scope, $cookies, ServiceMinhaConta, $location)
+{
 
-$scope.client = 
-	{
+    $scope.client = $cookies.getObject('cliente');
+    console.log($scope.client);
+    $scope.nomeCliente;
+    $scope.numeroCartao;
 
-		nome: 'Lucas Stein',
-		cpf:'416.543.628.32',
-		data_aniversario:'23/04/1996',
-		endereco:
-	            {
-	                logradouro: 'Rua Um',
-	                numero: '12',
-	                bairro:'Jd Floras',
-	                codigo_postal:'13172-754',
-	                cidade:'Americana',
-	                pais:'Brasil',
-	                estado:'SP'
-	            },
-	    email:'lucas@gmail.com',
-	    dados_pagamento:
-	    		{
-	    			numero_cartao:'4544 444 444 2333',
-	    			final_cartao:'2333',
-	    			validade_cartao:'04/20',
-	    			bandeira:'Mastercard'
+    $scope.salvar = function()
+    {
+        $scope.client.nomeCliente = $scope.nomeCliente;
+        $scope.client.cartaoDeCreditoList.push(
+            {
+                numeroDeSeguranca:$scope.numeroSeguranca,
+                numeroDoCartao: $scope.numeroCartao
+            }
+        );
+        
+        ServiceMinhaConta.saveClient($scope.client, function(data){
+            console.log(data.data);
+            if(data.data !== null && data.data !== '' && data.data !== undefined)
+            {
+                alert('cliente alterado com sucesso');
+                $cookies.putObject('cliente', data.data);
+                $scope.resetForm();
+                $('#mdEditar').modal('hide');
+            }
+        }, function(erro){
+            console.log(erro.data);
+        })
 
-	    		},
+    }
 
+    $scope.open = function()
+    {
+        $('#mdEditar').modal('show');
+    }
 
-	}
+    $scope.resetForm = function ()
+    {
+        $('#formAlterClient').each(function(){
+            this.reset();
+        });
+    };
 }]);
